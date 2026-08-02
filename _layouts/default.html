@@ -27,7 +27,12 @@
   <body>
     <header class="lg-head">
       <div class="lg-head-inner">
-        <a class="lg-brand" href="https://lyr.jp/">LYR</a>
+        <a class="lg-brand" href="https://lyr.jp/">
+          <!-- alt="" にするのは、直後に "LYR" という可視テキストがあるため。
+               読み上げが「LYR LYR」と重複するのを避ける。 -->
+          <img class="lg-icon" src="{{ '/icon.png' | relative_url }}" alt="" width="128" height="128" />
+          <span>LYR</span>
+        </a>
         <span class="lg-tag">Legal</span>
         <a class="lg-back" href="https://lyr.jp/">lyr.jp へ戻る →</a>
       </div>
