@@ -1,0 +1,124 @@
+/* ============================================================
+   LYR Legal — lyr.jp と同じ配色・書体に揃える。
+   値は lyr-blog の src/styles/landing.css の :root からそのまま持ってきている。
+   法務ページだけ GitHub 既定テーマ（開発者向けの見た目）だと、
+   アプリの設定画面やサイトのフッターから飛んだ瞬間に別サービスに見えるため。
+
+   ★読ませる文書なので LP よりも本文寄りに寄せている:
+     行長を 42em で止め、行間を広げ、見出しの階層を強くする。
+   ============================================================ */
+:root {
+  --bg: #08090b;
+  --bg-2: #101215;
+  --fg: #f4f4f5;
+  --dim: #9a9fa7;
+  --faint: #5c616a;
+  --line: #23262c;
+  --accent: #00e5c7;
+  --sans: system-ui, -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN",
+    "Yu Gothic", YuGothic, "Noto Sans JP", sans-serif;
+  --mono: ui-monospace, "SF Mono", "JetBrains Mono", Menlo, monospace;
+  --pad: clamp(20px, 5vw, 40px);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; display: block; }
+
+/* ---- header ---- */
+.lg-head {
+  border-bottom: 1px solid var(--line);
+  /* 上端のアクセント。OG 画像やアプリのアイコンと同じ色を 1 本入れて、
+     暗い板が「ただの黒いページ」に見えないようにする。 */
+  border-top: 3px solid var(--accent);
+}
+.lg-head-inner {
+  max-width: 46rem; margin: 0 auto; padding: 18px var(--pad);
+  display: flex; align-items: center; gap: 14px;
+}
+.lg-brand {
+  font-weight: 750; letter-spacing: -.01em; font-size: 19px;
+  text-decoration: none; color: var(--fg);
+}
+.lg-tag {
+  font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
+  color: var(--dim); text-transform: uppercase;
+}
+.lg-back {
+  margin-left: auto; font-size: 13.5px; color: var(--dim); text-decoration: none;
+}
+.lg-back:hover { color: var(--accent); }
+
+/* ---- 本文 ---- */
+main { max-width: 46rem; margin: 0 auto; padding: 8px var(--pad) 72px; }
+.lg-doc { max-width: 42em; }
+
+h1 {
+  font-size: clamp(26px, 5vw, 34px); line-height: 1.3; font-weight: 760;
+  letter-spacing: -.015em; margin: 40px 0 8px;
+}
+/* 「最終更新日 / アプリ名 / 発行主体 / 連絡先」の塊。
+   本文と同じ見た目だと属性情報が本文に埋もれるので、囲って落ち着かせる。 */
+h1 + p {
+  margin: 0 0 8px; padding: 16px 18px;
+  background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px;
+  font-size: 14px; line-height: 2; color: var(--dim);
+}
+h1 + p strong { color: var(--fg); font-weight: 650; }
+
+h2 {
+  font-size: 20px; font-weight: 720; letter-spacing: -.01em;
+  margin: 48px 0 12px; padding-top: 4px;
+}
+h3 { font-size: 16.5px; font-weight: 700; margin: 30px 0 8px; color: var(--fg); }
+p, li { color: #d7dade; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+strong { color: var(--fg); font-weight: 650; }
+ul, ol { padding-left: 1.35em; }
+li { margin: 6px 0; }
+hr { border: 0; border-top: 1px solid var(--line); margin: 40px 0; }
+
+table {
+  width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 14.5px;
+  display: block; overflow-x: auto;   /* 狭い画面では表だけ横スクロールさせる */
+}
+th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+th { background: var(--bg-2); color: var(--fg); font-weight: 650; white-space: nowrap; }
+
+code {
+  font-family: var(--mono); font-size: .9em;
+  background: var(--bg-2); border: 1px solid var(--line);
+  border-radius: 5px; padding: 1px 5px;
+}
+
+/* ---- 文書間の行き来 ---- */
+.lg-switch {
+  display: flex; flex-wrap: wrap; gap: 10px;
+  margin: 56px 0 0; padding-top: 28px; border-top: 1px solid var(--line);
+}
+.lg-switch a {
+  border: 1px solid var(--line); border-radius: 999px;
+  padding: 8px 16px; font-size: 14px; color: var(--fg); text-decoration: none;
+}
+.lg-switch a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+.lg-switch a[aria-current="page"] { border-color: var(--accent); color: var(--accent); }
+
+/* ---- footer ---- */
+.lg-foot {
+  border-top: 1px solid var(--line);
+  padding: 28px var(--pad) 56px;
+  font-family: var(--mono); font-size: 12.5px; color: var(--faint);
+}
+.lg-foot-inner { max-width: 46rem; margin: 0 auto; display: flex; gap: 18px; flex-wrap: wrap; }
+.lg-foot a { color: var(--faint); }
+.lg-foot a:hover { color: var(--accent); }

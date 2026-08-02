@@ -1,3 +1,5 @@
-theme: jekyll-theme-minimal
 title: LYR Legal
-description: LYR (Android screen translation app) legal documents
+description: LYR (Android 画面翻訳アプリ) の法務文書
+# ★GitHub 既定テーマは使わない。_layouts/default.html で lyr.jp と同じ配色・書体に
+#   揃えている。既定テーマのままだと、アプリの設定画面やサイトのフッターから飛んだ
+#   瞬間に別サービスに見える。

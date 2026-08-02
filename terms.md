@@ -1,9 +1,15 @@
+---
+layout: default
+title: 利用規約
+description: LYR (Android 画面翻訳アプリ) の利用規約。
+---
+
 # 利用規約
 
-**最終更新日**: 2026-04-23
-**アプリ名**: LYR (以下「本サービス」)
-**発行主体**: 代表者 (以下「開発者」)
-**連絡先**: lyr.support@gmail.com
+**最終更新日**: 2026-08-02 (発行主体・連絡先の表記を更新)  
+**ブランド / アプリ名**: LYR (以下「本サービス」)  
+**開発者**: Kento Nakai (個人開発者、以下「開発者」)  
+**連絡先**: [hello@lyr.jp](mailto:hello@lyr.jp)
 
 ---
 
@@ -99,4 +105,4 @@
 
 本規約に関するお問い合わせは以下までお願いします。
 
-- **メール**: lyr.support@gmail.com
+- **メール**: [hello@lyr.jp](mailto:hello@lyr.jp)
