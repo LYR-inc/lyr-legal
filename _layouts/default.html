@@ -6,8 +6,12 @@
     <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
     <meta name="description" content="{{ page.description | default: site.description }}" />
     <meta name="theme-color" content="#08090b" />
-    <link rel="icon" href="https://lyr.jp/favicon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="https://lyr.jp/apple-touch-icon.png" />
+    <!-- アプリと同じ筆ペンのアイコン。★lyr.jp を参照せずこのリポジトリに同梱する。
+         法務文書はアプリの設定画面から直接開かれるので、lyr.jp の公開状態に
+         依存させない (現に lyr.jp はまだ公開されていない)。 -->
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="any" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ '/favicon-32.png' | relative_url }}" />
+    <link rel="apple-touch-icon" href="{{ '/apple-touch-icon.png' | relative_url }}" />
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
     <meta property="og:title" content="{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}" />
     <meta property="og:description" content="{{ page.description | default: site.description }}" />
