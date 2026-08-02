@@ -45,13 +45,10 @@ img { max-width: 100%; display: block; }
   max-width: 46rem; margin: 0 auto; padding: 18px var(--pad);
   display: flex; align-items: center; gap: 14px;
 }
-.lg-brand {
-  display: flex; align-items: center; gap: 10px;
-  font-weight: 750; letter-spacing: -.01em; font-size: 19px;
-  text-decoration: none; color: var(--fg);
-}
-/* アプリと同じアイコン。ここが lyr.jp・アプリ・タブと同じマークになる。 */
-.lg-icon { width: 26px; height: 26px; border-radius: 22%; flex: none; display: block; }
+.lg-brand { display: flex; align-items: center; text-decoration: none; }
+/* lyr.jp のヘッダーと同じ LYR ロゴ。素材は暗い線画なので、暗い板の上では反転させる
+   (lyr.jp 側の .lp-brand img と同じ扱い)。 */
+.lg-logo { height: 20px; width: auto; display: block; filter: invert(1); }
 .lg-tag {
   font-family: var(--mono); font-size: 11px; letter-spacing: .06em;
   color: var(--dim); text-transform: uppercase;
