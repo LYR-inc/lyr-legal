@@ -7,7 +7,7 @@ description: Privacy Policy for LYR, an Android screen translation app — what 
 
 # Privacy Policy
 
-**Last updated**: 2026-08-03 (Reorganized the disclosures on transfers outside Japan; documented the handling terms agreed with the translation API provider and the Zero Data Retention setting. Includes the countries where inference servers are located, a caution about information visible on your screen, how to request disclosure and where to file complaints, security measures, and the scope of Accessibility Service use.)  
+**Last updated**: 2026-08-03 (Added the age 14 threshold for South Korea. Reorganized the disclosures on transfers outside Japan; documented the handling terms agreed with the translation API provider and the Zero Data Retention setting. Includes the countries where inference servers are located, a caution about information visible on your screen, how to request disclosure and where to file complaints, security measures, and the scope of Accessibility Service use.)  
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -192,7 +192,7 @@ However, **what we actually reference is only the app's package name, the type o
 
 ## 7. Age Requirement
 
-The Service is not intended for use by anyone **under the age of 13**. If you are under 13, please use the Service with the consent of a parent or guardian, or refrain from using it.
+The Service is not intended for use by anyone **under the age of 13** (**under the age of 14 if you are in South Korea**). If this applies to you, please use the Service with the consent of a parent or guardian, or refrain from using it.
 
 ---
 
