@@ -7,7 +7,7 @@ description: Privacy Policy for LYR, an Android screen translation app — what 
 
 # Privacy Policy
 
-**Last updated**: 2026-08-03 (Added the age 14 threshold for South Korea. Reorganized the disclosures on transfers outside Japan; documented the handling terms agreed with the translation API provider and the Zero Data Retention setting. Includes the countries where inference servers are located, a caution about information visible on your screen, how to request disclosure and where to file complaints, security measures, and the scope of Accessibility Service use.)  
+**Last updated**: 2026-08-03 (Aligned the usage-data description with the actual GA4 settings: stated the granularity of location estimation (city level) and the device information collected. Added the age 14 threshold for South Korea. Reorganized the disclosures on transfers outside Japan; documented the handling terms agreed with the translation API provider and the Zero Data Retention setting. Includes the countries where inference servers are located, a caution about information visible on your screen, how to request disclosure and where to file complaints, security measures, and the scope of Accessibility Service use.)  
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -118,7 +118,7 @@ Data transmitted:
 - Input and output token counts for translation requests, and the approximate cost calculated from them
 - Per-session duration and subtitle display count for real-time translation (Live), and a breakdown of the stage at which processing ended (no screen change, no text detected, translation timeout, and so on)
 - The number of times the paid plan screen was shown, the outcome there (purchase / later / left the screen), and how many seconds it was displayed
-- Information automatically added by Firebase Analytics: a random identifier per app installation, the originating IP address (used by Google to estimate approximate country and region), device model, OS version, app version, language setting, and basic events such as app launch and session start
+- Information automatically added by Firebase Analytics: a random identifier per app installation, the originating IP address (used by Google to estimate **approximate location, down to city level**; we do not obtain precise location such as from GPS), device model, device brand, screen resolution, OS version, app version, language setting, and basic events such as app launch and session start
 
 **What is not transmitted**: Text read by OCR, translation results, and screen content or images are **never included** in telemetry (everything above consists of counts, durations, success/failure, and similar aggregates).
 
