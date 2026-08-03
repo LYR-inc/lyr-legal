@@ -7,7 +7,7 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 # Terms of Service
 
-**Last updated**: 2026-08-02 (Updated the issuing entity and contact details)
+**Last updated**: 2026-08-03 (Rewrote Article 3 to match the implementation: documented the free plan's credit system, shared between screen translation and real-time translation, and added terms on automatic renewal, cancellation, refunds, and price changes for subscriptions)
 **Brand / App name**: LYR (the "Service")
 **Developer**: Kento Nakai (individual developer, the "Developer")
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -33,13 +33,26 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 ## Article 3 (Fees)
 
-1. The Service offers the following two plans.
-   - **Free plan**: Up to 30 translations per day
-   - **Paid plan (JPY 980 per month)**: Unlimited translations
+1. The Service offers two plans: a free plan and a paid plan.
 
-2. The paid plan is offered as a monthly subscription through the Google Play Billing Library. Billing, cancellation, and refunds are handled in accordance with Google Play's terms.
+2. **Free plan**: You may use the Service within an allowance of 30 credits per day. Credits are shared between screen translation and real-time translation (Live), and are consumed as follows.
 
-3. After cancellation, you may continue to use the paid features until the end of the period already paid for. We do not provide prorated refunds within a monthly period.
+   - Screen translation: 1 credit per translation
+   - Real-time translation (Live): 1 credit per 30 seconds (2 credits per minute)
+
+   Accordingly, if you spend all of your credits on real-time translation, the daily maximum is 15 minutes. Credits reset when the date changes on your device. The number of credits and the consumption rates may change in accordance with Article 9.
+
+3. **Paid plan**: You may use the Service without the credit limit described in the preceding paragraph.
+
+4. **Price display**: Prices for the paid plan are displayed on Google Play in the currency of your country or region. **The amount and billing period shown on the purchase screen are what apply.**
+
+5. **Subscription and automatic renewal**: The paid plan is offered as a **monthly or annual subscription** through Google Play Billing. **Unless you cancel, it renews automatically at the end of each billing period and you are charged the same amount.**
+
+6. **Cancellation**: You may cancel at any time from the "Subscriptions" screen in Google Play. To stop the next charge, Google Play requires that you cancel **at least 24 hours before the renewal date**. After cancellation, you may continue to use the paid features until the end of the period already paid for. We do not provide prorated refunds if you cancel partway through a billing period.
+
+7. **Refunds**: Whether a refund is available, and the procedure for it, are governed by Google Play's terms and policies. The Developer cannot issue refunds independently for charges made through Google Play.
+
+8. **Price changes**: The Developer may revise prices. Price increases for existing subscribers will be notified in advance as required by Google Play, and consent will be sought where necessary. If you do not consent, you may cancel under the preceding paragraph.
 
 ---
 
