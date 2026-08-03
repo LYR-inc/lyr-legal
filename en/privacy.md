@@ -7,9 +7,9 @@ description: Privacy Policy for LYR, an Android screen translation app — what 
 
 # Privacy Policy
 
-**Last updated**: 2026-08-03 (Reorganized the disclosures on transfers outside Japan; documented the handling terms agreed with the translation API provider and the Zero Data Retention setting. Includes the countries where inference servers are located, a caution about information visible on your screen, how to request disclosure and where to file complaints, security measures, and the scope of Accessibility Service use.)
-**Brand / App name**: LYR (the "Service")
-**Developer**: Kento Nakai (individual developer, the "Developer")
+**Last updated**: 2026-08-03 (Reorganized the disclosures on transfers outside Japan; documented the handling terms agreed with the translation API provider and the Zero Data Retention setting. Includes the countries where inference servers are located, a caution about information visible on your screen, how to request disclosure and where to file complaints, security measures, and the scope of Accessibility Service use.)  
+**Brand / App name**: LYR (the "Service")  
+**Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
 
 > **This is a translation.** The Japanese version of this Privacy Policy is the original. If there is any discrepancy between the two, [the Japanese version](../privacy.html) prevails.

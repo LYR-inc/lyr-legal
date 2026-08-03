@@ -7,9 +7,9 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 # Terms of Service
 
-**Last updated**: 2026-08-03 (Rewrote Article 3 to match the implementation: documented the free plan's credit system, shared between screen translation and real-time translation, and added terms on automatic renewal, cancellation, refunds, and price changes for subscriptions)
-**Brand / App name**: LYR (the "Service")
-**Developer**: Kento Nakai (individual developer, the "Developer")
+**Last updated**: 2026-08-03 (Rewrote Article 3 to match the implementation: documented the free plan's credit system, shared between screen translation and real-time translation, and added terms on automatic renewal, cancellation, refunds, and price changes for subscriptions)  
+**Brand / App name**: LYR (the "Service")  
+**Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
 
 > **This is a translation.** The Japanese version of these Terms is the original. If there is any discrepancy between the two, [the Japanese version](../terms.html) prevails.
