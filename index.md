@@ -8,7 +8,17 @@ description: LYR (Android 画面翻訳アプリ) の法務文書。
 
 LYR (Android 画面翻訳アプリ) の法務文書を掲載しています。
 
-- [プライバシーポリシー / Privacy Policy](./privacy.html)
-- [利用規約 / Terms of Service](./terms.html)
+## 日本語 (原本)
 
-お問い合わせ: hello@lyr.jp
+- [プライバシーポリシー](./privacy.html)
+- [利用規約](./terms.html)
+
+## English
+
+英語版は参考訳です。内容に相違がある場合は日本語版が優先します。
+*The English version is a reference translation. If there is any discrepancy, the Japanese version prevails.*
+
+- [Privacy Policy](./en/privacy.html)
+- [Terms of Service](./en/terms.html)
+
+お問い合わせ / Contact: hello@lyr.jp
