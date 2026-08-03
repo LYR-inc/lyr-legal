@@ -7,7 +7,7 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 # Terms of Service
 
-**Last updated**: 2026-08-03 (Rewrote Article 3 to match the implementation: documented the free plan's credit system, shared between screen translation and real-time translation, and added terms on automatic renewal, cancellation, refunds, and price changes for subscriptions)  
+**Last updated**: 2026-08-03 (Added a clause on use by minors to Article 1. Rewrote Article 3 to match the implementation: documented the free plan's credit system, shared between screen translation and real-time translation, and added terms on automatic renewal, cancellation, refunds, and price changes for subscriptions)  
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -21,6 +21,8 @@ description: Terms of Service for LYR, an Android screen translation app.
 1. These Terms of Service (the "Terms") set out the conditions for using LYR (the "Service") provided by the Developer. By using the Service, you are deemed to have agreed to these Terms.
 
 2. **Where the Service is offered**: The Service is offered only to users in the countries and regions the Developer has selected for distribution on Google Play. **It is not offered in the European Economic Area (EEA), the United Kingdom, Türkiye, Russia, mainland China, Vietnam, or Indonesia**, and it is not offered or advertised to users in those regions. The set of distribution regions may change without notice.
+
+3. **Minors**: If you are a minor (you have not reached the age of majority under the laws of your country or region), you must obtain the consent of a parent or other legal guardian before using the Service and before purchasing the paid plan. Please also see the separately established Privacy Policy for the ages of users the Service is intended for.
 
 ---
 
