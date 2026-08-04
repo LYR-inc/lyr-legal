@@ -41,13 +41,13 @@
 </main>
 <script>
 (function () {
-  // ==== 差し替えるのはこの 2 つだけ ====
+  // ==== 差し替えるのはここと、末尾 noscript の URL ====
   // 2026-08-04: 内部テスト用フォーム。本番用に切り替える際はここを差し替える。
-  var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSfePLE3tSFtO9lr0aj-9BW0cYQRiyt-zEBLj1CDstLJKhOjhQ/viewform";
+  var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSefxuMl6uovoSg_Keh4FjcnGmUSq78Mo7Bbdp_7GUwlde7kYQ/viewform";
   var MAP = {
-    v: "entry.794150183",   // アプリバージョン
-    d: "entry.2043710211",  // 端末
-    l: "entry.1059082204"   // UI 言語
+    v: "entry.388271732",  // アプリバージョン
+    d: "entry.264105969",  // 端末
+    l: "entry.351765480"   // UI 言語
   };
   // ====================================
 
@@ -77,7 +77,9 @@
 })();
 </script>
 <noscript>
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSfePLE3tSFtO9lr0aj-9BW0cYQRiyt-zEBLj1CDstLJKhOjhQ/viewform">フィードバックフォームを開く</a></p>
+  <!-- ★上の FORM と同じ URL を書く。JS 無効だとスクリプトから書き換えられないため、
+       ここだけは重複を持つしかない。差し替え時はこちらも直すこと。 -->
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSefxuMl6uovoSg_Keh4FjcnGmUSq78Mo7Bbdp_7GUwlde7kYQ/viewform">フィードバックフォームを開く</a></p>
 </noscript>
 </body>
 </html>
