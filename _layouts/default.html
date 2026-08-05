@@ -8,12 +8,14 @@
   同じ文書の別言語版への相互リンクを組み立てる。ファイル名 (privacy / terms) は
   言語間で揃えてあるので、URL からどちらの文書かを判定して接頭辞だけ差し替える。
 {%- endcomment -%}
-{%- if page.url contains 'privacy' -%}{%- assign doc = 'privacy' -%}{%- else -%}{%- assign doc = 'terms' -%}{%- endif -%}
+{%- if page.url contains 'privacy' -%}{%- assign doc = 'privacy' -%}{%- elsif page.url contains 'licenses' -%}{%- assign doc = 'licenses' -%}{%- else -%}{%- assign doc = 'terms' -%}{%- endif -%}
 {%- if lang == 'en' -%}
   {%- assign privacy_url = '/en/privacy.html' -%}
   {%- assign terms_url = '/en/terms.html' -%}
   {%- assign privacy_label = 'Privacy Policy' -%}
   {%- assign terms_label = 'Terms of Service' -%}
+  {%- assign licenses_url = '/en/licenses.html' -%}
+  {%- assign licenses_label = 'Licenses' -%}
   {%- assign alt_url = '/' | append: doc | append: '.html' -%}
   {%- assign alt_label = '日本語' -%}
   {%- assign back_label = 'Back to lyr.jp →' -%}
@@ -23,6 +25,8 @@
   {%- assign terms_url = '/terms.html' -%}
   {%- assign privacy_label = 'プライバシーポリシー' -%}
   {%- assign terms_label = '利用規約' -%}
+  {%- assign licenses_url = '/licenses.html' -%}
+  {%- assign licenses_label = 'ライセンス表記' -%}
   {%- assign alt_url = '/en/' | append: doc | append: '.html' -%}
   {%- assign alt_label = 'English' -%}
   {%- assign back_label = 'lyr.jp へ戻る →' -%}
@@ -68,13 +72,14 @@
       <div class="lg-doc">
         {{ content }}
 
-        <!-- 2 文書しかないので、末尾で相互に行き来できるようにする。
-             アプリの設定画面からは片方だけを開くため、もう一方への導線がここにないと
-             ブラウザの戻る以外に手段がなくなる。 -->
+        <!-- アプリの設定画面からは1文書だけを開くため、他文書への導線がここにないと
+             ブラウザの戻る以外に手段がなくなる。文書を追加したらここにも足すこと
+             (上の `doc` 判定も同様。判定漏れは「現在ページ」表示がずれる形で出る)。 -->
         {% unless page.url == '/' or page.url == '/index.html' %}
         <nav class="lg-switch">
           <a href="{{ privacy_url | relative_url }}"{% if doc == 'privacy' %} aria-current="page"{% endif %}>{{ privacy_label }}</a>
           <a href="{{ terms_url | relative_url }}"{% if doc == 'terms' %} aria-current="page"{% endif %}>{{ terms_label }}</a>
+          <a href="{{ licenses_url | relative_url }}"{% if doc == 'licenses' %} aria-current="page"{% endif %}>{{ licenses_label }}</a>
           <!-- 別言語版。日本語版が原本なので、英語版からは必ず日本語版へ戻れるようにする。 -->
           <a href="{{ alt_url | relative_url }}" hreflang="{% if lang == 'en' %}ja{% else %}en{% endif %}" rel="alternate">{{ alt_label }}</a>
         </nav>

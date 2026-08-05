@@ -12,6 +12,7 @@ LYR (Android 画面翻訳アプリ) の法務文書を掲載しています。
 
 - [プライバシーポリシー](./privacy.html)
 - [利用規約](./terms.html)
+- [ライセンス表記](./licenses.html)
 
 ## English
 
@@ -20,5 +21,6 @@ LYR (Android 画面翻訳アプリ) の法務文書を掲載しています。
 
 - [Privacy Policy](./en/privacy.html)
 - [Terms of Service](./en/terms.html)
+- [Open Source Licenses](./en/licenses.html)
 
 お問い合わせ / Contact: hello@lyr.jp
