@@ -37,7 +37,7 @@ description: LYR (Android 画面翻訳アプリ) が利用しているオープ�
 上記のほか、これらのライブラリが依存する形で Apache License 2.0 のもとで提供される
 コンポーネントを含みます。個別の名称と全文が必要な場合はお問い合わせください。
 
-Google ML Kit、Google Play サービス、Firebase、Google Play Billing Library は、
+Google Play サービス、Firebase、Google Play Billing Library は、
 [Google API 利用規約](https://developers.google.com/terms) および各サービスの利用条件に
 基づいて利用しています。
 

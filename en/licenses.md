@@ -39,9 +39,9 @@ In addition to the above, the app includes components provided under the Apache 
 transitive dependencies of these libraries. Please contact us if you need the individual names
 and full license texts.
 
-Google ML Kit, Google Play services, Firebase and the Google Play Billing Library are used
-under the [Google APIs Terms of Service](https://developers.google.com/terms) and the terms
-of each service.
+Google Play services, Firebase and the Google Play Billing Library are used under the
+[Google APIs Terms of Service](https://developers.google.com/terms) and the terms of each
+service.
 
 ## 2. Fonts
 
