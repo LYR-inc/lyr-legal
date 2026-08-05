@@ -13,8 +13,6 @@ description: Licenses and attribution for the open source software, fonts, and m
 LYR uses the software, fonts, and machine learning models listed below. Copyright in each
 remains with its respective holder, and we use each item under the terms of its license.
 
-Model files downloaded after first launch are also covered by this page.
-
 ---
 
 ## 1. Software libraries
@@ -59,11 +57,6 @@ The full license texts are bundled with the app.
 **PaddleOCR (PP-OCRv5)**
 The detection, recognition and angle classification models derive from PaddleOCR.
 License: Apache License 2.0 / Source: [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
-
-**Manga OCR**
-Downloaded by the app on first use. Derived from
-[kha-white/manga-ocr](https://github.com/kha-white/manga-ocr).
-License: Apache License 2.0
 
 ## 4. Automatic speech recognition (ASR) models
 

@@ -12,8 +12,6 @@ description: LYR (Android 画面翻訳アプリ) が利用しているオープ�
 本サービスは、以下のソフトウェア・フォント・機械学習モデルを利用しています。各項目の著作権は
 それぞれの権利者に帰属します。ここに掲げるライセンスの条件に従って利用しています。
 
-なお、アプリの初回起動後にダウンロードされるモデルファイルについても、本ページの対象に含みます。
-
 ---
 
 ## 1. ソフトウェアライブラリ
@@ -57,11 +55,6 @@ Google ML Kit、Google Play サービス、Firebase、Google Play Billing Librar
 **PaddleOCR (PP-OCRv5)**
 検出・認識・角度分類の各モデルは PaddleOCR に由来します。
 ライセンス: Apache License 2.0 / 出典: [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
-
-**Manga OCR**
-アプリが初回にダウンロードするモデルです。
-[kha-white/manga-ocr](https://github.com/kha-white/manga-ocr) に由来します。
-ライセンス: Apache License 2.0
 
 ## 4. 音声認識 (ASR) モデル
 
