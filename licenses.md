@@ -57,13 +57,8 @@ Apache License 2.0 で公開されており、本サービスはその ONNX 変�
 ## 4. 音声認識 (ASR) モデル
 
 **日本語**
-本サービスが独自に学習したモデルです。
-学習データ: [ReazonSpeech](https://research.reazon.jp/projects/ReazonSpeech/)
-配布: [ken4869/lyr-asr-ja-streaming](https://huggingface.co/ken4869/lyr-asr-ja-streaming)
-
-学習は日本国著作権法第30条の4 (情報解析のための利用) に基づいて行っています。
-モデル構造は [k2-fsa/icefall](https://github.com/k2-fsa/icefall) の
-streaming zipformer transducer に由来します (Apache License 2.0)。
+本サービスが独自に学習・保有するモデルです。第三者のライセンス条件の対象となる
+構成要素は含まれていません。
 
 ---
 

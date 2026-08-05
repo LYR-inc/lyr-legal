@@ -58,13 +58,7 @@ the Apache License 2.0; we use its ONNX conversion
 ## 4. Automatic speech recognition (ASR) models
 
 **Japanese**
-Trained by us.
-Training data: [ReazonSpeech](https://research.reazon.jp/projects/ReazonSpeech/)
-Distribution: [ken4869/lyr-asr-ja-streaming](https://huggingface.co/ken4869/lyr-asr-ja-streaming)
-
-Training was carried out under Article 30-4 of the Japanese Copyright Act (use for information
-analysis). The model architecture derives from the streaming zipformer transducer in
-[k2-fsa/icefall](https://github.com/k2-fsa/icefall) (Apache License 2.0).
+Trained and owned by us. It contains no components subject to third-party license terms.
 
 ---
 
