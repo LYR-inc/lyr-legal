@@ -42,15 +42,16 @@
 <script>
 (function () {
   // ==== 差し替えるのはここと、末尾 noscript の URL ====
-  // 2026-08-04: 内部テスト用フォーム。本番用に切り替える際はここを差し替える。
-  var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSefxuMl6uovoSg_Keh4FjcnGmUSq78Mo7Bbdp_7GUwlde7kYQ/viewform";
+  // 2026-08-06: 内部テスト用フォーム (LYR 表記統一 + 国 / 地域の設問を追加した版に差し替え)。
+  //             旧フォーム (1FAIpQLSefxuMl6...) は回答 0 件のまま破棄。
+  var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdS4Y_VUP5By7UpESl2_mR7i-HLDqDgEPhm4UCcDICPMAWK-A/viewform";
   // ★ここは Apps Script の item.getId() ではなく、**prefill 用の entry ID**。
   //   両者は別物で、item ID を書くと Google 側に黙って無視され prefill が効かない。
   //   取得法は create_feedback_form.gs の logPrefillEntryIds() を参照。
   var MAP = {
-    v: "entry.1952736536",  // アプリバージョン
-    d: "entry.940322161",   // 端末
-    l: "entry.1872075440"   // UI 言語
+    v: "entry.1088394266",  // アプリバージョン
+    d: "entry.713008000",   // 端末
+    l: "entry.373375709"    // UI 言語
   };
   // ====================================
 
@@ -82,7 +83,7 @@
 <noscript>
   <!-- ★上の FORM と同じ URL を書く。JS 無効だとスクリプトから書き換えられないため、
        ここだけは重複を持つしかない。差し替え時はこちらも直すこと。 -->
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSefxuMl6uovoSg_Keh4FjcnGmUSq78Mo7Bbdp_7GUwlde7kYQ/viewform">フィードバックフォームを開く</a></p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdS4Y_VUP5By7UpESl2_mR7i-HLDqDgEPhm4UCcDICPMAWK-A/viewform">フィードバックフォームを開く</a></p>
 </noscript>
 </body>
 </html>
