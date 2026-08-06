@@ -42,16 +42,23 @@
 <script>
 (function () {
   // ==== 差し替えるのはここと、末尾 noscript の URL ====
-  // 2026-08-06: 内部テスト用フォーム (LYR 表記統一 + 国 / 地域の設問を追加した版に差し替え)。
-  //             旧フォーム (1FAIpQLSefxuMl6...) は回答 0 件のまま破棄。
-  var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdS4Y_VUP5By7UpESl2_mR7i-HLDqDgEPhm4UCcDICPMAWK-A/viewform";
+  // 2026-08-06: 内部テスト用フォーム。個人アカウント所有の版に差し替え。
+  //   Workspace アカウントで作るとフォーム下部に「このフォームは <組織名> 内部で作成されました」と
+  //   組織名が出るため (テスターから別名義に見える / EU 法人だと EEA 除外の建て付けと干渉する)。
+  //   Workspace → 個人のオーナー移行は Drive の制約でできないので作り直している。
+  //   旧フォーム 2 本 (1FAIpQLSefxuMl6... / 1FAIpQLSdS4Y...) は回答 0 件のまま破棄。
+  //
+  // ★差し替え直後の 10 分間は古い版が使われる。GitHub Pages が Cache-Control: max-age=600 を
+  //   返すため。古い entry ID は Google 側に黙って捨てられ「prefill されない」形で現れるので、
+  //   実機確認は 10 分待つか ?cb=<適当な値> を付けて行うこと (2026-08-06 に踏んだ)。
+  var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdeKABY3UCs9IBpslTJ5t4paAzn-MIFC-AXYwcCK_2kvtQzxg/viewform";
   // ★ここは Apps Script の item.getId() ではなく、**prefill 用の entry ID**。
   //   両者は別物で、item ID を書くと Google 側に黙って無視され prefill が効かない。
   //   取得法は create_feedback_form.gs の logPrefillEntryIds() を参照。
   var MAP = {
-    v: "entry.1088394266",  // アプリバージョン
-    d: "entry.713008000",   // 端末
-    l: "entry.373375709"    // UI 言語
+    v: "entry.1422426635",  // アプリバージョン
+    d: "entry.1982042586",  // 端末
+    l: "entry.1356152833"   // UI 言語
   };
   // ====================================
 
@@ -83,7 +90,7 @@
 <noscript>
   <!-- ★上の FORM と同じ URL を書く。JS 無効だとスクリプトから書き換えられないため、
        ここだけは重複を持つしかない。差し替え時はこちらも直すこと。 -->
-  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdS4Y_VUP5By7UpESl2_mR7i-HLDqDgEPhm4UCcDICPMAWK-A/viewform">フィードバックフォームを開く</a></p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdeKABY3UCs9IBpslTJ5t4paAzn-MIFC-AXYwcCK_2kvtQzxg/viewform">フィードバックフォームを開く</a></p>
 </noscript>
 </body>
 </html>
