@@ -24,7 +24,6 @@ remains with its respective holder, and we use each item under the terms of its 
 | OkHttp | Apache License 2.0 | [square/okhttp](https://github.com/square/okhttp) |
 | Gson | Apache License 2.0 | [google/gson](https://github.com/google/gson) |
 | ICU4J | Unicode License | [unicode-org/icu](https://github.com/unicode-org/icu) |
-| LiteRT (TensorFlow Lite) | Apache License 2.0 | [google-ai-edge/LiteRT](https://github.com/google-ai-edge/LiteRT) |
 | AndroidX / Jetpack Compose | Apache License 2.0 | [Android Open Source Project](https://source.android.com/) |
 | Kotlin / kotlinx.coroutines | Apache License 2.0 | [JetBrains/kotlin](https://github.com/JetBrains/kotlin) |
 | Okio | Apache License 2.0 | [square/okio](https://github.com/square/okio) |
