@@ -7,7 +7,7 @@ description: Privacy Policy for LYR, an Android screen translation app — what 
 
 # Privacy Policy
 
-**Last updated**: 2026-08-03 (Aligned the usage-data description with the actual GA4 settings: stated the granularity of location estimation (city level) and the device information collected. Added the age 14 threshold for South Korea. Reorganized the disclosures on transfers outside Japan; documented the handling terms agreed with the translation API provider and the Zero Data Retention setting. Includes the countries where inference servers are located, a caution about information visible on your screen, how to request disclosure and where to file complaints, security measures, and the scope of Accessibility Service use.)  
+**Last updated**: 2026-08-08 (Added the handling of audio being played (2.3) and the `RECORD_AUDIO` permission for Audio mode. Clarified that speech recognition runs on-device, that audio is never transmitted, and that the microphone is not used.)
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -57,7 +57,36 @@ The Service is a screen translation app that runs on your Android device. It pro
 > information or the personal information of others.** If you do translate information about other
 > people, you are responsible for confirming that doing so is appropriate.
 
-### 2.3 Local settings
+### 2.3 Audio being played (Audio mode)
+
+Collected only when you use Audio mode.
+
+- **Purpose**: Extracting text for translation via speech recognition
+- **What is captured**: **Audio being played on your device.** We use Android's
+  AudioPlaybackCapture API to capture sound played by other apps
+- **★We do not record from the microphone**: We declare the `RECORD_AUDIO` permission,
+  but only because Android requires it for the playback capture described above.
+  **It is not used for microphone input**, so conversations around you are never captured
+- **How it is processed**: **Speech recognition runs entirely on your device.** The
+  recognition model is downloaded to your device and executed locally
+- **External transmission**: **The audio itself is never sent outside your device**
+- **Retention**: Audio is not stored. It is processed as it arrives and then discarded
+- **What is sent for translation**: **Only the recognized text**, through the same route
+  as "2.2". The scope of what is sent and the handling of the device identifier are the
+  same as "2.2"
+
+> ### ⚠️ About the audio you play (important)
+>
+> Audio mode treats **all audio played on your device** as input for recognition. If you
+> play a call, or a recording that contains other people's speech, text generated from
+> that content will be sent for translation.
+>
+> **Please do not use Audio mode with sensitive content, or with audio containing other
+> people's speech.** If you translate someone else's voice, you are responsible for
+> confirming that doing so is permitted (including any consent required for recording
+> and translation).
+
+### 2.4 Local settings
 
 The following are stored only in DataStore / SharedPreferences on your device and are not transmitted externally.
 
@@ -172,6 +201,7 @@ The Service uses the following permissions.
 | `VIBRATE` | Haptic feedback for interactions |
 | `INTERNET` / `ACCESS_NETWORK_STATE` | Sending translation requests to the translation API and checking connectivity |
 | `WAKE_LOCK` | Preventing processing from being interrupted during real-time translation |
+| `RECORD_AUDIO` | **Capturing device playback audio in Audio mode.** Android requires this permission for AudioPlaybackCapture. **It is not used for microphone recording** (see "2.3") |
 | Accessibility Service | Detecting scroll stop, identifying the foreground app, and locating the main content area in browsers (see section 6; text content is not read) |
 
 ---

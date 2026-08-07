@@ -7,7 +7,7 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 # Terms of Service
 
-**Last updated**: 2026-08-03 (Added a clause on use by minors to Article 1. Rewrote Article 3 to match the implementation: documented the free plan's credit system, shared between screen translation and real-time translation, and added terms on automatic renewal, cancellation, refunds, and price changes for subscriptions)  
+**Last updated**: 2026-08-08 (Added audio translation (Audio) to the credit consumption rates in Article 3. It consumes credits at the same rate as Live (1 credit per 30 seconds) and shares the existing allowance.)
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -37,12 +37,13 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 1. The Service offers two plans: a free plan and a paid plan.
 
-2. **Free plan**: You may use the Service within an allowance of 30 credits per day. Credits are shared between screen translation and real-time translation (Live), and are consumed as follows.
+2. **Free plan**: You may use the Service within an allowance of 30 credits per day. Credits are shared across screen translation, real-time translation (Live), and audio translation (Audio), and are consumed as follows.
 
-   - Screen translation: 1 credit per translation
+   - Screen translation (Page / Manga): 1 credit per translation
    - Real-time translation (Live): 1 credit per 30 seconds (2 credits per minute)
+   - Audio translation (Audio): 1 credit per 30 seconds (2 credits per minute)
 
-   Accordingly, if you spend all of your credits on real-time translation, the daily maximum is 15 minutes. Credits reset when the date changes on your device. The number of credits and the consumption rates may change in accordance with Article 9.
+   Accordingly, if you spend all of your credits on the time-based features (Live or Audio), the daily maximum is 15 minutes in total. Credits reset when the date changes on your device. The number of credits and the consumption rates may change in accordance with Article 9.
 
 3. **Paid plan**: You may use the Service without the credit limit described in the preceding paragraph.
 

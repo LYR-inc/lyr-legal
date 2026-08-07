@@ -59,17 +59,32 @@ License: Apache License 2.0 / Source: [PaddlePaddle/PaddleOCR](https://github.co
 
 ## 4. Automatic speech recognition (ASR) models
 
-**Japanese**
-Trained and owned by us. It contains no components subject to third-party license terms.
+Models used by Audio mode. **Recognition runs entirely on the device.**
+
+| Language | Model | License | Source |
+|---|---|---|---|
+| Japanese | Trained and owned by us | — | Training data: [ReazonSpeech](https://research.reazon.jp/projects/ReazonSpeech/) |
+| English | NVIDIA NeMo FastConformer | **CC BY 4.0** | [nvidia/stt_en_fastconformer_hybrid_large_streaming_multi](https://huggingface.co/nvidia/stt_en_fastconformer_hybrid_large_streaming_multi) |
+
+The Japanese model is trained and owned by us. Training was carried out as information
+analysis under Article 30-4 of the Japanese Copyright Act (use not intended for the
+enjoyment of the thoughts or sentiments expressed in the work).
 
 ---
 
 ## Attribution
 
-For any component derived from a dataset under a Creative Commons Attribution license, the
-source is credited below.
+For components licensed under Creative Commons Attribution, the source and rights holder
+are credited below.
 
-(None at present)
+### English speech recognition model
+
+- **Author**: NVIDIA Corporation
+- **Title**: `stt_en_fastconformer_hybrid_large_streaming_multi`
+- **Source**: <https://huggingface.co/nvidia/stt_en_fastconformer_hybrid_large_streaming_multi>
+- **License**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- **Changes**: We converted the model to ONNX format and applied int8 quantization.
+  No changes were made to the model weights themselves.
 
 ---
 

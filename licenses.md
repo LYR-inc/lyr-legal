@@ -6,7 +6,7 @@ description: LYR (Android 画面翻訳アプリ) が利用しているオープ�
 
 # ライセンス表記
 
-**最終更新日**: 2026-08-06
+**最終更新日**: 2026-08-08
 **対象**: LYR (Android 画面翻訳アプリ)
 
 本サービスは、以下のソフトウェア・フォント・機械学習モデルを利用しています。各項目の著作権は
@@ -57,18 +57,32 @@ Google Play サービス、Firebase、Google Play Billing Library は、
 
 ## 4. 音声認識 (ASR) モデル
 
-**日本語**
-本サービスが独自に学習・保有するモデルです。第三者のライセンス条件の対象となる
-構成要素は含まれていません。
+Audio モードで使用する音声認識モデルです。**認識処理は端末内で完結**します。
+
+| 対応言語 | モデル | ライセンス | 出典 |
+|---|---|---|---|
+| 日本語 | 本サービスが独自に学習 | — | 学習データ: [ReazonSpeech](https://research.reazon.jp/projects/ReazonSpeech/) |
+| 英語 | NVIDIA NeMo FastConformer | **CC BY 4.0** | [nvidia/stt_en_fastconformer_hybrid_large_streaming_multi](https://huggingface.co/nvidia/stt_en_fastconformer_hybrid_large_streaming_multi) |
+
+日本語モデルは本サービスが独自に学習・保有するものです。学習にあたっては
+日本国著作権法第30条の4 (著作物に表現された思想又は感情の享受を目的としない利用) に
+基づき情報解析の用に供しています。
 
 ---
 
 ## 帰属表示 (Attribution)
 
-上記のうち、Creative Commons Attribution ライセンスのデータセットに由来するものについては、
-以下に出典を明示します。
+上記のうち、Creative Commons Attribution ライセンスに基づくものについて、
+以下に出典と権利者を明示します。
 
-（現時点で該当なし）
+### 英語 音声認識モデル
+
+- **著作者**: NVIDIA Corporation
+- **名称**: `stt_en_fastconformer_hybrid_large_streaming_multi`
+- **出典**: <https://huggingface.co/nvidia/stt_en_fastconformer_hybrid_large_streaming_multi>
+- **ライセンス**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- **変更の有無**: 本サービスでは、上記モデルを ONNX 形式へ変換し、int8 量子化を施したものを
+  利用しています。モデルの重み自体に学習等の変更は加えていません。
 
 ---
 
