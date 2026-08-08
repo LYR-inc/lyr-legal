@@ -65,10 +65,14 @@ Models used by Audio mode. **Recognition runs entirely on the device.**
 |---|---|---|---|
 | Japanese | Trained and owned by us | — | Training data: [ReazonSpeech](https://research.reazon.jp/projects/ReazonSpeech/) |
 | English | NVIDIA NeMo FastConformer | **CC BY 4.0** | [nvidia/stt_en_fastconformer_hybrid_large_streaming_multi](https://huggingface.co/nvidia/stt_en_fastconformer_hybrid_large_streaming_multi) |
+| Korean | Trained and owned by us | — | Training data: [YODAS](https://huggingface.co/datasets/espnet/yodas) (**CC BY 3.0**) |
 
 The Japanese model is trained and owned by us. Training was carried out as information
 analysis under Article 30-4 of the Japanese Copyright Act (use not intended for the
 enjoyment of the thoughts or sentiments expressed in the work).
+
+The Korean model is likewise trained and owned by us. Because its training data (YODAS) is
+distributed under CC BY 3.0, attribution is given below.
 
 ---
 
@@ -85,6 +89,15 @@ are credited below.
 - **License**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 - **Changes**: We converted the model to ONNX format and applied int8 quantization.
   No changes were made to the model weights themselves.
+
+### Training data for the Korean speech recognition model
+
+- **Author**: Xinjian Li et al. (YODAS)
+- **Title**: YODAS (`ko000` = manual-caption subset)
+- **Source**: <https://huggingface.co/datasets/espnet/yodas>
+- **License**: [Creative Commons Attribution 3.0 (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
+- **Changes**: We used this dataset to train a speech recognition model. The dataset itself
+  is not redistributed. The resulting model is owned by us.
 
 ---
 
