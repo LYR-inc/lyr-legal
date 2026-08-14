@@ -66,13 +66,17 @@ Models used by Audio mode. **Recognition runs entirely on the device.**
 | Japanese | Trained and owned by us | — | Training data: [ReazonSpeech](https://research.reazon.jp/projects/ReazonSpeech/) |
 | English | NVIDIA NeMo FastConformer | **CC BY 4.0** | [nvidia/stt_en_fastconformer_hybrid_large_streaming_multi](https://huggingface.co/nvidia/stt_en_fastconformer_hybrid_large_streaming_multi) |
 | Korean | Trained and owned by us | — | Training data: [YODAS](https://huggingface.co/datasets/espnet/yodas) (**CC BY 3.0**) |
+| Portuguese | Trained and owned by us | — | Training data: [YODAS2](https://huggingface.co/datasets/espnet/yodas2) (**CC BY 3.0**) |
 
 The Japanese model is trained and owned by us. Training was carried out as information
 analysis under Article 30-4 of the Japanese Copyright Act (use not intended for the
 enjoyment of the thoughts or sentiments expressed in the work).
 
-The Korean model is likewise trained and owned by us. Because its training data (YODAS) is
-distributed under CC BY 3.0, attribution is given below.
+The Korean and Portuguese models are likewise trained and owned by us. Because their
+training data (YODAS / YODAS2) is distributed under CC BY 3.0, attribution is given below.
+
+The Korean and Portuguese models were also trained with the MUSAN corpus for noise
+robustness. MUSAN is distributed under CC BY 4.0, so it is likewise credited below.
 
 ---
 
@@ -98,6 +102,24 @@ are credited below.
 - **License**: [Creative Commons Attribution 3.0 (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
 - **Changes**: We used this dataset to train a speech recognition model. The dataset itself
   is not redistributed. The resulting model is owned by us.
+
+### Training data for the Portuguese speech recognition model
+
+- **Author**: Xinjian Li et al. (YODAS)
+- **Title**: YODAS2 (`pt000` = manual-caption subset)
+- **Source**: <https://huggingface.co/datasets/espnet/yodas2>
+- **License**: [Creative Commons Attribution 3.0 (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
+- **Changes**: We used this dataset to train a speech recognition model. The dataset itself
+  is not redistributed. The resulting model is owned by us.
+
+### Noise data used to train the Korean and Portuguese speech recognition models
+
+- **Author**: David Snyder, Guoguo Chen, Daniel Povey
+- **Title**: MUSAN: A Music, Speech, and Noise Corpus (arXiv:1510.08484)
+- **Source**: <https://www.openslr.org/17/>
+- **License**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- **Changes**: We used the noise portion of this corpus for noise augmentation during
+  training. The corpus itself is not redistributed.
 
 ---
 

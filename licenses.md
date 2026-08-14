@@ -64,13 +64,18 @@ Audio モードで使用する音声認識モデルです。**認識処理は端
 | 日本語 | 本サービスが独自に学習 | — | 学習データ: [ReazonSpeech](https://research.reazon.jp/projects/ReazonSpeech/) |
 | 英語 | NVIDIA NeMo FastConformer | **CC BY 4.0** | [nvidia/stt_en_fastconformer_hybrid_large_streaming_multi](https://huggingface.co/nvidia/stt_en_fastconformer_hybrid_large_streaming_multi) |
 | 韓国語 | 本サービスが独自に学習 | — | 学習データ: [YODAS](https://huggingface.co/datasets/espnet/yodas) (**CC BY 3.0**) |
+| ポルトガル語 | 本サービスが独自に学習 | — | 学習データ: [YODAS2](https://huggingface.co/datasets/espnet/yodas2) (**CC BY 3.0**) |
 
 日本語モデルは本サービスが独自に学習・保有するものです。学習にあたっては
 日本国著作権法第30条の4 (著作物に表現された思想又は感情の享受を目的としない利用) に
 基づき情報解析の用に供しています。
 
-韓国語モデルも本サービスが独自に学習・保有するものですが、学習データである YODAS が
-CC BY 3.0 で提供されているため、下記のとおり帰属表示を行います。
+韓国語モデルとポルトガル語モデルも本サービスが独自に学習・保有するものですが、
+学習データである YODAS / YODAS2 が CC BY 3.0 で提供されているため、
+下記のとおり帰属表示を行います。
+
+また、韓国語・ポルトガル語モデルの学習では雑音への強さを高めるために MUSAN コーパスを
+用いています。MUSAN は CC BY 4.0 で提供されているため、同じく帰属表示を行います。
 
 ---
 
@@ -97,6 +102,25 @@ CC BY 3.0 で提供されているため、下記のとおり帰属表示を行�
 - **変更の有無**: 本サービスでは、上記データセットを音声認識モデルの学習に利用しています
   (データセットそのものは再配布していません)。学習して得られたモデルは本サービスが
   保有するものです。
+
+### ポルトガル語 音声認識モデルの学習データ
+
+- **著作者**: Xinjian Li ほか (YODAS)
+- **名称**: YODAS2 (`pt000` = 人手字幕サブセット)
+- **出典**: <https://huggingface.co/datasets/espnet/yodas2>
+- **ライセンス**: [Creative Commons Attribution 3.0 (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
+- **変更の有無**: 本サービスでは、上記データセットを音声認識モデルの学習に利用しています
+  (データセットそのものは再配布していません)。学習して得られたモデルは本サービスが
+  保有するものです。
+
+### 韓国語・ポルトガル語 音声認識モデルの学習に用いた雑音データ
+
+- **著作者**: David Snyder, Guoguo Chen, Daniel Povey
+- **名称**: MUSAN: A Music, Speech, and Noise Corpus (arXiv:1510.08484)
+- **出典**: <https://www.openslr.org/17/>
+- **ライセンス**: [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- **変更の有無**: 本サービスでは、上記コーパスのうち雑音 (noise) を学習時の雑音重畳に
+  利用しています (コーパスそのものは再配布していません)。
 
 ---
 
