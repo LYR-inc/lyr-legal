@@ -7,7 +7,7 @@ description: Privacy Policy for LYR, an Android screen translation app — what 
 
 # Privacy Policy
 
-**Last updated**: 2026-08-08 (Added the handling of audio being played (2.3) and the `RECORD_AUDIO` permission for Audio mode. Clarified that speech recognition runs on-device, that audio is never transmitted, and that the microphone is not used.)
+**Last updated**: 2026-XX-XX (★Speech recognition for Audio mode moved from on-device to servers operated by the Developer. Section 2.3 rewritten: the audio itself is sent, the countries it is sent to, that it is not stored, and that Audio mode is unavailable offline. Audio also added to the cross-border transfer table in 3.1.)
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -67,19 +67,25 @@ Collected only when you use Audio mode.
 - **★We do not record from the microphone**: We declare the `RECORD_AUDIO` permission,
   but only because Android requires it for the playback capture described above.
   **It is not used for microphone input**, so conversations around you are never captured
-- **How it is processed**: **Speech recognition runs entirely on your device.** The
-  recognition model is downloaded to your device and executed locally
-- **External transmission**: **The audio itself is never sent outside your device**
-- **Retention**: Audio is not stored. It is processed as it arrives and then discarded
-- **What is sent for translation**: **Only the recognized text**, through the same route
-  as "2.2". The scope of what is sent and the handling of the device identifier are the
-  same as "2.2"
+- **★How it is processed (the audio is sent off your device)**: Speech recognition runs on
+  **an inference server operated by the developer**. For each stretch of speech, that
+  segment of audio is encrypted with HTTPS (TLS), sent to the server, and the recognized
+  text is returned. The translation that follows runs on the same server
+- **Countries it is sent to**: **Taiwan, the United States, Canada, or Japan.** See "3.1"
+  for how it is handled in each country and the safeguards we apply
+- **Retention**: **Audio is not stored.** On the server it is held only in memory and
+  discarded as soon as recognition finishes. It is never written out as a file
+- **Device identifier**: The same device identifier as "2.2" is used **for authentication
+  at the relay server**, to prevent abuse. **It is never sent to the inference server
+  together with the audio**
+- **When offline**: Because speech recognition runs on the server, **Audio mode cannot be
+  used without a network connection**
 
 > ### ⚠️ About the audio you play (important)
 >
 > Audio mode treats **all audio played on your device** as input for recognition. If you
-> play a call, or a recording that contains other people's speech, text generated from
-> that content will be sent for translation.
+> play a call, or a recording that contains other people's speech, **that audio itself**
+> is sent to the server for recognition, and text generated from it is translated.
 >
 > **Please do not use Audio mode with sensitive content, or with audio containing other
 > people's speech.** If you translate someone else's voice, you are responsible for
@@ -105,20 +111,22 @@ Token usage and plan type (free / paid) are stored on your device, but **are als
 
 Text extracted by OCR is sent for translation by way of a relay server operated by the Developer (Cloudflare Workers). There are two processing routes, and **which one is used is determined automatically based on the type of processing (manga, live subtitles, full page, and so on) and on server availability**. You cannot choose between them.
 
-On either route, **only the text to be translated is sent**. **The device identifier is consumed at the relay server and is sent to neither route.**
+On either route, what is sent is the **text to be translated**.
+**★In Audio mode only, the audio itself is additionally sent to the inference server in (b)** (see "2.3").
+**The device identifier is consumed at the relay server and is sent to neither route.**
 
 | Item | **(a) External LLM API service** (processing entrusted to a service provider) | **(b) Inference servers operated by the Developer** |
 |---|---|---|
 | **Recipient** | An LLM API provider located in the United States. **The provider's name will be disclosed on request to the contact address at the end of this Policy.** It may change without notice based on quality, speed, cost, and similar considerations | **The Developer.** Translation content is not handed to a third party; it is processed on servers the Developer rents |
 | **Country of the recipient** | **United States** | One of **Taiwan, the United States, Canada, or Japan.** We switch among these depending on speed, cost, and availability. **If we add a country beyond this set, we will update this Policy in advance** |
-| **Data transferred** | Only the **text to be translated**, extracted from the screen by OCR | Same as at left |
+| **Data transferred** | Only the **text to be translated**, extracted from the screen by OCR | Same as at left. **★In Audio mode, additionally the stretches of device playback audio identified as speech** (see "2.3") |
 | **Data not transferred** | Device identifier, screen images, account information, usage data | Same as at left |
-| **Purpose of transfer** | Solely to obtain the translation result | Same as at left |
-| **Timing of transfer** | Each time you run a translation | Same as at left |
+| **Purpose of transfer** | Solely to obtain the translation result | Solely to obtain the translation result (in Audio mode, speech recognition and translation) |
+| **Timing of transfer** | Each time you run a translation | Same as at left. In Audio mode, once per stretch of speech |
 | **Method of transfer** | API communication encrypted with HTTPS (TLS) | Same as at left |
-| **Retention and use period** | Until translation processing completes. **Discarded afterwards and not stored** | Same as at left |
+| **Retention and use period** | Until translation processing completes. **Discarded afterwards and not stored** | Same as at left. **Audio likewise is discarded from memory as soon as recognition finishes and is not stored as a file** |
 | **Data protection regime of the recipient country** | None of the countries above is recognized as having a level of protection equivalent to Japan's (as the EU and the UK are). For an overview of each country's regime, please refer to the [survey of foreign personal information protection systems](https://www.ppc.go.jp/personalinfo/legal/kaiseihogohou/#gaikoku) published by Japan's Personal Information Protection Commission | Same as at left |
-| **Measures taken at the recipient** | Communications are encrypted with HTTPS (TLS) and what is sent is limited to the text to be translated. In addition, our contract with the provider (data processing terms) confirms the following — that **the text we send will not be used to train or tune AI models**; that it will not be used or retained beyond what is necessary to provide the service; that security measures including encryption at rest and in transit and multi-factor authentication are in place, along with third-party audit (SOC 2 Type II); that a list of sub-processors is published and prior notice is given before additions; that we will be notified **within 72 hours** in the event of a breach; and that we may request deletion of data on termination. Furthermore, the Developer has **enabled Zero Data Retention**, so **inputs and outputs are not stored by the provider** | In addition to the encryption above, the servers are configured with **authentication so that only the Developer can access them** |
+| **Measures taken at the recipient** | Communications are encrypted with HTTPS (TLS) and what is sent is limited to the text to be translated. In addition, our contract with the provider (data processing terms) confirms the following — that **the text we send will not be used to train or tune AI models**; that it will not be used or retained beyond what is necessary to provide the service; that security measures including encryption at rest and in transit and multi-factor authentication are in place, along with third-party audit (SOC 2 Type II); that a list of sub-processors is published and prior notice is given before additions; that we will be notified **within 72 hours** in the event of a breach; and that we may request deletion of data on termination. Furthermore, the Developer has **enabled Zero Data Retention**, so **inputs and outputs are not stored by the provider** | In addition to the encryption above, the servers are configured with **authentication so that only the Developer can access them**. The servers' operational logs are also configured **not to retain the text to be translated or speech recognition results** — only operational information such as processing times |
 
 **If you do not want these transfers**: Sending text for translation is the core function of the Service, so the Service cannot be used without it. If you do not want these transfers, please refrain from using the Service. Note that "3.2 Usage Data" and "3.3 Crash Reports" are separate from translation and **can each be turned off individually from the settings screen**.
 
@@ -182,8 +190,10 @@ We do not provide information to any third parties other than those listed in 3.
 ## 4. Retention Periods
 
 - **Screen captures**: Discarded from memory immediately after translation processing ends
+- **★Audio (Audio mode)**: Held **only in memory** on both the device and the server, and discarded as soon as recognition finishes. It is **never written out as a file** on either
 - **OCR text / translation results**: Stored in an on-device translation cache (keyed by MD5 hash) and deleted completely when you uninstall the app
 - **Server-side storage**: The relay server operated by the Developer (Cloudflare Workers) stores **only usage counters**. The device identifier and originating IP address are hashed and used as counter keys; the original values are not stored. **Text to be translated and translation results are not stored on the server**
+- **★Inference server operational logs**: We record **only operational information** such as processing time, audio duration, and whether an error occurred. **Audio, recognized text, and translation results are not recorded.** These logs contain no device identifier and are not in a form that can be linked to an individual user
 - **Counter retention**: Counters are aggregated per minute and per day and are overwritten when the period rolls over. They are not accumulated as a usage history
 - **Retention of usage data / crash reports**: Data transmitted under 3.2 and 3.3 is stored in Firebase and in Google BigQuery (United States) managed by the Developer. Event-level data is retained for **up to 14 months**, and data past that limit is deleted on a rolling basis. However, statistics aggregated so that individual events cannot be identified (such as daily usage counts and average processing times) may be retained beyond that limit. None of this includes OCR text, translation results, or screen content. If you turn off "Usage Data" or "Crash Reports" in settings, the corresponding data is no longer transmitted from then on
 
