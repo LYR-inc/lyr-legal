@@ -7,7 +7,7 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 # Terms of Service
 
-**Last updated**: 2026-08-08 (Added audio translation (Audio) to the credit consumption rates in Article 3. It consumes credits at the same rate as Live (1 credit per 30 seconds) and shares the existing allowance.)
+**Last updated**: 2026-XX-XX (Revised the description of the Service in Article 2 to reflect the current combination of translation and speech recognition on servers operated by the Developer and an external translation API, and added Audio. Added Switzerland to the regions in Article 1, the technical limits that also apply to the paid plan in Article 3, and the handling of server outages in Article 7.)
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -20,7 +20,7 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 1. These Terms of Service (the "Terms") set out the conditions for using LYR (the "Service") provided by the Developer. By using the Service, you are deemed to have agreed to these Terms.
 
-2. **Where the Service is offered**: The Service is offered only to users in the countries and regions the Developer has selected for distribution on Google Play. **It is not offered in the European Economic Area (EEA), the United Kingdom, Türkiye, Russia, mainland China, Vietnam, or Indonesia**, and it is not offered or advertised to users in those regions. The set of distribution regions may change without notice.
+2. **Where the Service is offered**: The Service is offered only to users in the countries and regions the Developer has selected for distribution on Google Play. **It is not offered in the European Economic Area (EEA), the United Kingdom, Switzerland, Türkiye, Russia, mainland China, Vietnam, or Indonesia** [TO CONFIRM: Switzerland — same as Privacy Policy section 1], and it is not offered or advertised to users in those regions. The set of distribution regions may change without notice.
 
 3. **Minors**: If you are a minor (you have not reached the age of majority under the laws of your country or region), you must obtain the consent of a parent or other legal guardian before using the Service and before purchasing the paid plan. Please also see the separately established Privacy Policy for the ages of users the Service is intended for.
 
@@ -28,8 +28,9 @@ description: Terms of Service for LYR, an Android screen translation app.
 
 ## Article 2 (Description of the Service)
 
-1. The Service extracts text on the screen of your Android device using OCR and displays translation results as an overlay by way of an external translation API.
-2. The form, specifications, and features of the Service may be changed or discontinued without prior notice to users.
+1. The Service extracts text on the screen of your Android device using OCR, or converts audio being played on your device into text using speech recognition (audio translation (Audio)), and displays the translation of that text as an overlay. Translation and speech recognition are performed by models on servers operated by the Developer or by an external translation API (large language models); which is used is determined automatically based on the type of processing and server availability (see the Privacy Policy for details).
+2. A network connection is required to use the Service. In particular, because audio translation (Audio) performs speech recognition on a server, it cannot be used without a network connection or while the Developer's servers are down.
+3. The form, specifications, and features of the Service may be changed or discontinued without prior notice to users.
 
 ---
 
@@ -45,7 +46,7 @@ description: Terms of Service for LYR, an Android screen translation app.
 
    Accordingly, if you spend all of your credits on the time-based features (Live or Audio), the daily maximum is 15 minutes in total. Credits reset when the date changes on your device. The number of credits and the consumption rates may change in accordance with Article 9.
 
-3. **Paid plan**: You may use the Service without the credit limit described in the preceding paragraph.
+3. **Paid plan**: You may use the Service without the credit limit described in the preceding paragraph. However, to prevent abuse and excessive load on the servers, technical limits apply to the number of requests per device and per network connection over short periods and per day, and these limits also apply to the paid plan.
 
 4. **Price display**: Prices for the paid plan are displayed on Google Play in the currency of your country or region. **The amount and billing period shown on the purchase screen are what apply.**
 
@@ -76,7 +77,7 @@ In using the Service, you must not:
 
 ## Article 5 (Treatment of Translation Results)
 
-1. Translation results from the Service are based on the probabilistic inference of large language models (LLMs), and their accuracy and completeness are not guaranteed.
+1. Translation results and speech recognition results from the Service are based on the probabilistic inference of machine learning models, including large language models (LLMs), and their accuracy and completeness are not guaranteed.
 2. If you rely on translation results for important decisions in business, academic, legal, medical, or similar contexts, you must have them verified by a specialist or an official translator.
 
 ---
@@ -93,7 +94,7 @@ In using the Service, you must not:
 
 1. The Developer bears no liability whatsoever for any damage arising from use of the Service (including direct or indirect damage, lost profits, and data loss).
 2. The Developer makes no warranty of any kind, express or implied, as to the availability, accuracy, or security of the Service.
-3. The Service depends on external translation API services, and periods may occur in which the Service is unavailable due to suspension or specification changes of those services.
+3. The Service depends on servers operated by the Developer and on external translation API services, and periods may occur in which all or part of the Service (in particular audio translation (Audio)) is unavailable due to suspension, congestion, or specification changes of those services.
 
 ---
 
