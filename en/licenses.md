@@ -7,7 +7,7 @@ description: Licenses and attribution for the open source software, fonts, and m
 
 # Open Source Licenses
 
-**Last updated**: 2026-08-06
+**Last updated**: 2026-XX-XX (Reflects moving speech recognition for Audio mode to servers and no longer distributing on-device speech recognition models or sherpa-onnx. Server-side models are listed for reference, and the attribution for speech recognition models distributed in earlier versions has moved to "Included in earlier versions".)
 **Applies to**: LYR (Android screen translation app)
 
 LYR uses the software, fonts, and machine learning models listed below. Copyright in each
@@ -20,11 +20,10 @@ remains with its respective holder, and we use each item under the terms of its 
 | Name | License | Source |
 |---|---|---|
 | ONNX Runtime | MIT License | [microsoft/onnxruntime](https://github.com/microsoft/onnxruntime) |
-| sherpa-onnx | Apache License 2.0 | [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) |
 | OkHttp | Apache License 2.0 | [square/okhttp](https://github.com/square/okhttp) |
 | Gson | Apache License 2.0 | [google/gson](https://github.com/google/gson) |
 | ICU4J | Unicode License | [unicode-org/icu](https://github.com/unicode-org/icu) |
-| AndroidX / Jetpack Compose | Apache License 2.0 | [Android Open Source Project](https://source.android.com/) |
+| AndroidX / Jetpack Compose / Media3 | Apache License 2.0 | [Android Open Source Project](https://source.android.com/) |
 | Kotlin / kotlinx.coroutines | Apache License 2.0 | [JetBrains/kotlin](https://github.com/JetBrains/kotlin) |
 | Okio | Apache License 2.0 | [square/okio](https://github.com/square/okio) |
 | Guava | Apache License 2.0 | [google/guava](https://github.com/google/guava) |
@@ -51,15 +50,56 @@ service.
 
 The full license texts are bundled with the app.
 
-## 3. Optical character recognition (OCR) models
+## 3. On-device models, including optical character recognition (OCR)
 
 **PaddleOCR (PP-OCRv5)**
-The detection, recognition and angle classification models derive from PaddleOCR.
+The detection, recognition and angle classification models derive from PaddleOCR. Some
+recognition models (for example, for vertical text) were further trained by us starting from
+PaddleOCR models.
 License: Apache License 2.0 / Source: [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
 
-## 4. Automatic speech recognition (ASR) models
+**Speech bubble detection model**
+The model that detects speech bubbles in manga follows the YOLOX-Nano design and was trained by us
+on synthetic data only.
+YOLOX license: Apache License 2.0 / Source: [Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)
+[TO CONFIRM: whether YOLOX pretrained weights or source code were used — if only the design was followed, no attribution is required; decide whether to keep this paragraph]
 
-Models used by Audio mode. **Recognition runs entirely on the device.**
+Other on-device models (for example, for tracking text regions) were designed and trained by us.
+
+## 4. Speech recognition (ASR)
+
+Speech recognition for Audio mode **runs on servers operated by the Developer**. The current
+app does not contain any speech recognition model (see the Privacy Policy for what is sent).
+
+The servers use the following models and software. They are not distributed as part of the app,
+but are listed for reference.
+
+| Name | License | Source |
+|---|---|---|
+| Whisper large-v3 (OpenAI) | MIT License | [openai/whisper](https://github.com/openai/whisper) |
+| faster-whisper | MIT License | [SYSTRAN/faster-whisper](https://github.com/SYSTRAN/faster-whisper) |
+| CTranslate2 | MIT License | [OpenNMT/CTranslate2](https://github.com/OpenNMT/CTranslate2) |
+
+## 5. Translation
+
+Translation is performed either by a translation model on servers operated by the Developer or by
+an external translation API. The server-side translation model uses part of Qwen3.6-27B (Qwen team,
+Alibaba Cloud) to read the input, with the part that generates translations trained by us. It is
+not distributed as part of the app, but is listed for reference.
+Qwen license: Apache License 2.0 [TO CONFIRM: check the license stated on the Qwen3.6-27B model card] / Source: [Qwen](https://huggingface.co/Qwen)
+
+---
+
+## Attribution
+
+The current app contains no components licensed under Creative Commons Attribution.
+
+### Included in earlier versions
+
+Earlier versions of the app (versionCode 5–8, versions 0.2.0–0.2.3, distributed for testing)
+[TO CONFIRM: range of versions that used on-device recognition] performed speech recognition for
+Audio mode on the device, downloading and using the speech recognition models below. We keep the
+attribution for anyone who still has those versions.
 
 | Language | Model | License | Source |
 |---|---|---|---|
@@ -74,18 +114,11 @@ enjoyment of the thoughts or sentiments expressed in the work).
 
 The Korean and Portuguese models are likewise trained and owned by us. Because their
 training data (YODAS / YODAS2) is distributed under CC BY 3.0, attribution is given below.
-
 The Korean and Portuguese models were also trained with the MUSAN corpus for noise
 robustness. MUSAN is distributed under CC BY 4.0, so it is likewise credited below.
+Those versions used sherpa-onnx (Apache License 2.0, [k2-fsa/sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)) to run recognition.
 
----
-
-## Attribution
-
-For components licensed under Creative Commons Attribution, the source and rights holder
-are credited below.
-
-### English speech recognition model
+#### English speech recognition model
 
 - **Author**: NVIDIA Corporation
 - **Title**: `stt_en_fastconformer_hybrid_large_streaming_multi`
@@ -94,7 +127,7 @@ are credited below.
 - **Changes**: We converted the model to ONNX format and applied int8 quantization.
   No changes were made to the model weights themselves.
 
-### Training data for the Korean speech recognition model
+#### Training data for the Korean speech recognition model
 
 - **Author**: Xinjian Li et al. (YODAS)
 - **Title**: YODAS (`ko000` = manual-caption subset)
@@ -103,7 +136,7 @@ are credited below.
 - **Changes**: We used this dataset to train a speech recognition model. The dataset itself
   is not redistributed. The resulting model is owned by us.
 
-### Training data for the Portuguese speech recognition model
+#### Training data for the Portuguese speech recognition model
 
 - **Author**: Xinjian Li et al. (YODAS)
 - **Title**: YODAS2 (`pt000` = manual-caption subset)
@@ -112,7 +145,7 @@ are credited below.
 - **Changes**: We used this dataset to train a speech recognition model. The dataset itself
   is not redistributed. The resulting model is owned by us.
 
-### Noise data used to train the Korean and Portuguese speech recognition models
+#### Noise data used to train the Korean and Portuguese speech recognition models
 
 - **Author**: David Snyder, Guoguo Chen, Daniel Povey
 - **Title**: MUSAN: A Music, Speech, and Noise Corpus (arXiv:1510.08484)
