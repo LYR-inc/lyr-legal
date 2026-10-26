@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>LYR フィードバック</title>
+<title>LYR フィードバック / Feedback</title>
 <!--
   LYR アプリの「フィードバックを送る」からの入口。
 
@@ -17,7 +17,10 @@
   この MAP だけに置く。そうするとフォームを作り直して entry ID が変わっても
   (entry ID はフォーム固有で、複製すると変わる) アプリ側は無傷で済む。
 
-  差し替え手順: FORM と MAP の 2 つを直して commit するだけ。アプリの更新は不要。
+  差し替え手順: FORMS の該当言語の form と map を直して commit するだけ。アプリの更新は不要。
+
+  ★言語の振り分け（2026-10-27）: アプリの UI 言語（l）が ja で始まれば日本語版、それ以外は英語版。
+  l が無ければブラウザの言語で同じ判定。英語版が未設定（REPLACE_ が残っている）なら日本語版へ送る。
 -->
 <style>
   body {
@@ -36,8 +39,8 @@
 </head>
 <body>
 <main>
-  <p>フィードバックフォームを開いています…</p>
-  <p><a id="fallback" href="#">開かない場合はこちら</a></p>
+  <p>フィードバックフォームを開いています… / Opening the feedback form…</p>
+  <p><a id="fallback" href="#">開かない場合はこちら / Tap here if it does not open</a></p>
 </main>
 <script>
 (function () {
@@ -51,18 +54,33 @@
   // ★差し替え直後の 10 分間は古い版が使われる。GitHub Pages が Cache-Control: max-age=600 を
   //   返すため。古い entry ID は Google 側に黙って捨てられ「prefill されない」形で現れるので、
   //   実機確認は 10 分待つか ?cb=<適当な値> を付けて行うこと (2026-08-06 に踏んだ)。
-  var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdeKABY3UCs9IBpslTJ5t4paAzn-MIFC-AXYwcCK_2kvtQzxg/viewform";
-  // ★ここは Apps Script の item.getId() ではなく、**prefill 用の entry ID**。
-  //   両者は別物で、item ID を書くと Google 側に黙って無視され prefill が効かない。
-  //   取得法は create_feedback_form.gs の logPrefillEntryIds() を参照。
-  var MAP = {
-    v: "entry.1422426635",  // アプリバージョン
-    d: "entry.1982042586",  // 端末
-    l: "entry.1356152833"   // UI 言語
+  var FORMS = {
+    ja: {
+      form: "https://docs.google.com/forms/d/e/1FAIpQLSdeKABY3UCs9IBpslTJ5t4paAzn-MIFC-AXYwcCK_2kvtQzxg/viewform",
+      map: {
+        v: "entry.1422426635",  // アプリバージョン
+        d: "entry.1982042586",  // 端末
+        l: "entry.1356152833"   // UI 言語
+      }
+    },
+    // ★create_feedback_form.gs の createLyrFeedbackFormEn() のログ（FORM_URL・ENTRY_*）を転記する
+    en: {
+      form: "https://docs.google.com/forms/d/e/1FAIpQLSe62ADfBj_417v4MOXwZvFwNHhujlF2tHQYJk2x26NeW5Kurg/viewform",
+      map: {
+        v: "entry.1243702480",
+        d: "entry.561685847",
+        l: "entry.197908203"
+      }
+    }
   };
   // ====================================
 
   var params = new URLSearchParams(location.search);
+  var lang = (params.get("l") || navigator.language || "ja").toLowerCase();
+  var pick = lang.indexOf("ja") === 0 ? FORMS.ja : FORMS.en;
+  if (pick.form.indexOf("REPLACE_") !== -1) pick = FORMS.ja;   // 英語版が未設定なら日本語版へ
+  var FORM = pick.form, MAP = pick.map;
+  if (pick === FORMS.en) document.documentElement.lang = "en";
   var out = new URLSearchParams();
   var mapped = false;
 
@@ -91,6 +109,7 @@
   <!-- ★上の FORM と同じ URL を書く。JS 無効だとスクリプトから書き換えられないため、
        ここだけは重複を持つしかない。差し替え時はこちらも直すこと。 -->
   <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSdeKABY3UCs9IBpslTJ5t4paAzn-MIFC-AXYwcCK_2kvtQzxg/viewform">フィードバックフォームを開く</a></p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSe62ADfBj_417v4MOXwZvFwNHhujlF2tHQYJk2x26NeW5Kurg/viewform">Open the feedback form (English)</a></p>
 </noscript>
 </body>
 </html>
