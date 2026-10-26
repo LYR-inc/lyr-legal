@@ -6,8 +6,8 @@ description: LYR (Android・iOS の翻訳アプリ) が利用しているオー�
 
 # ライセンス表記
 
-**最終更新日**: 2026-10-26 (Audio モードの音声認識をサーバーへ移し、端末内の音声認識モデルと sherpa-onnx の配布をやめたことを反映。サーバー側で使用するモデルを参考として追記し、以前の版で配布していた音声認識モデルの帰属表示は「以前の版に含まれていたもの」へ移動。吹き出し検出モデルの学習方法を正確に記載。iOS 版について追記)
-**対象**: LYR (Android 版・iOS 版)。iOS 版のアプリは外部のライブラリを含まず、Apple が提供するフレームワークのみを使用しています。「4」「5」のサーバー側のモデルは両方の版で共通です
+**最終更新日**: 2026-10-27 (iOS 版に Firebase Analytics を組み込んだことを反映し、「1. ソフトウェアライブラリ」に iOS 版の一覧を追記)
+**対象**: LYR (Android 版・iOS 版)。iOS 版のアプリは、Apple が提供するフレームワークのほか、「1」の「iOS 版」に掲げるライブラリを使用しています。「4」「5」のサーバー側のモデルは両方の版で共通です
 
 本サービスは、以下のソフトウェア・フォント・機械学習モデルを利用しています。各項目の著作権は
 それぞれの権利者に帰属します。ここに掲げるライセンスの条件に従って利用しています。
@@ -15,6 +15,8 @@ description: LYR (Android・iOS の翻訳アプリ) が利用しているオー�
 ---
 
 ## 1. ソフトウェアライブラリ
+
+### Android 版
 
 | 名称 | ライセンス | 出典 |
 |---|---|---|
@@ -31,6 +33,21 @@ description: LYR (Android・iOS の翻訳アプリ) が利用しているオー�
 | J2ObjC (annotations) | Apache License 2.0 | [google/j2objc](https://github.com/google/j2objc) |
 | JSR 305 (annotations) | Apache License 2.0 | [findbugsproject/findbugs](https://github.com/findbugsproject/findbugs) |
 | javax.inject | Apache License 2.0 | [javax-inject/javax-inject](https://github.com/javax-inject/javax-inject) |
+
+### iOS 版
+
+| 名称 | ライセンス | 出典 |
+|---|---|---|
+| Firebase Apple SDK (FirebaseCore / FirebaseCoreInternal / FirebaseInstallations / FirebaseAnalytics) | Apache License 2.0 | [firebase/firebase-ios-sdk](https://github.com/firebase/firebase-ios-sdk) |
+| GoogleUtilities | Apache License 2.0 | [google/GoogleUtilities](https://github.com/google/GoogleUtilities) |
+| Promises (FBLPromises) | Apache License 2.0 | [google/promises](https://github.com/google/promises) |
+| nanopb | zlib License | [nanopb/nanopb](https://github.com/nanopb/nanopb) |
+
+Google App Measurement（Firebase Analytics の計測部分）はバイナリで提供されており、
+[Google API 利用規約](https://developers.google.com/terms) に基づいて利用しています。
+Apache License 2.0 の全文: <https://www.apache.org/licenses/LICENSE-2.0>
+
+### 共通
 
 上記のほか、これらのライブラリが依存する形で Apache License 2.0 のもとで提供される
 コンポーネントを含みます。個別の名称と全文が必要な場合はお問い合わせください。

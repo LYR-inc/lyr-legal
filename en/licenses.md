@@ -7,8 +7,8 @@ description: Licenses and attribution for the open source software, fonts, and m
 
 # Open Source Licenses
 
-**Last updated**: 2026-10-26 (Reflects moving speech recognition for Audio mode to servers and no longer distributing on-device speech recognition models or sherpa-onnx. Server-side models are listed for reference, and the attribution for speech recognition models distributed in earlier versions has moved to "Included in earlier versions". Describes accurately how the speech bubble detection model was trained, and adds the iOS version.)
-**Applies to**: LYR (Android and iOS). The iOS app contains no third-party libraries and uses only frameworks provided by Apple. The server-side models in 4 and 5 are shared by both versions
+**Last updated**: 2026-10-27 (Reflects adding Firebase Analytics to the iOS version, and adds the list for the iOS version to "1. Software libraries")
+**Applies to**: LYR (Android and iOS). In addition to frameworks provided by Apple, the iOS app uses the libraries listed under "iOS" in 1. The server-side models in 4 and 5 are shared by both versions
 
 LYR uses the software, fonts, and machine learning models listed below. Copyright in each
 remains with its respective holder, and we use each item under the terms of its license.
@@ -16,6 +16,8 @@ remains with its respective holder, and we use each item under the terms of its 
 ---
 
 ## 1. Software libraries
+
+### Android
 
 | Name | License | Source |
 |---|---|---|
@@ -32,6 +34,21 @@ remains with its respective holder, and we use each item under the terms of its 
 | J2ObjC (annotations) | Apache License 2.0 | [google/j2objc](https://github.com/google/j2objc) |
 | JSR 305 (annotations) | Apache License 2.0 | [findbugsproject/findbugs](https://github.com/findbugsproject/findbugs) |
 | javax.inject | Apache License 2.0 | [javax-inject/javax-inject](https://github.com/javax-inject/javax-inject) |
+
+### iOS
+
+| Name | License | Source |
+|---|---|---|
+| Firebase Apple SDK (FirebaseCore / FirebaseCoreInternal / FirebaseInstallations / FirebaseAnalytics) | Apache License 2.0 | [firebase/firebase-ios-sdk](https://github.com/firebase/firebase-ios-sdk) |
+| GoogleUtilities | Apache License 2.0 | [google/GoogleUtilities](https://github.com/google/GoogleUtilities) |
+| Promises (FBLPromises) | Apache License 2.0 | [google/promises](https://github.com/google/promises) |
+| nanopb | zlib License | [nanopb/nanopb](https://github.com/nanopb/nanopb) |
+
+Google App Measurement (the measurement part of Firebase Analytics) is distributed as a binary and is
+used under the [Google APIs Terms of Service](https://developers.google.com/terms).
+Full text of the Apache License 2.0: <https://www.apache.org/licenses/LICENSE-2.0>
+
+### Common
 
 In addition to the above, the app includes components provided under the Apache License 2.0 as
 transitive dependencies of these libraries. Please contact us if you need the individual names

@@ -7,7 +7,7 @@ description: Privacy Policy for LYR, a translation app for Android and iOS — w
 
 # Privacy Policy
 
-**Last updated**: 2026-10-26 (Revised for the launch of the iOS version. Main changes: 1 and 2 add the iOS version / 2.1, 2.2, 2.5, 3.2, 3.3 and 6 are marked as Android only / 2.3 adds how the iOS version captures audio, its recent-subtitle context and device identifier / 2.4 adds what the iOS version keeps on the device, including its activity log / 3.1 adds the route used by the iOS version / 3.5 adds paid-plan purchases (Google Play and App Store) / 4, 8 and 8-3 add how the iOS version is handled (the device identifier and activity log are excluded from backups) / 5 splits permissions into Android and iOS / 3.5 adds feedback and inquiries (the iOS version receives them by email) and 4 adds how long we keep them)
+**Last updated**: 2026-10-27 (Revised so that the iOS version also sends usage data. Main changes: 3.2 now applies to both the Android and iOS versions and lists what the iOS version additionally sends and how to turn it off / 2.4 refers to 3.2 for the iOS version / 4 applies the retention period for usage data to both versions)
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
