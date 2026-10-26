@@ -138,7 +138,7 @@ Collected only when you use Audio mode.
 
 Token usage and plan type (free / paid) are stored on your device, but **are also transmitted in aggregate form as part of the usage data** (see section 3.2).
 
-**iOS**: The following are stored on your device (within the Service's storage). The source and target languages are also included in translation requests (see 2.3); nothing else here is transmitted externally.
+**iOS**: The following are stored on your device (within the Service's storage). The source and target languages are also included in translation requests (see 2.3), and some settings and operational information are also sent as aggregated usage data (see 3.2); nothing else here is transmitted externally.
 
 - Source and target languages, how the original text is shown, and the "Also recognize English" setting
 - A record that you agreed to the first-run explanation
@@ -225,9 +225,9 @@ Otherwise, **the device identifier is consumed at the relay server and is sent t
 
 If there is a material change, we will update the "Last updated" date of this Policy to notify you.
 
-### 3.2 Usage data (analytics; Android only)
+### 3.2 Usage data (analytics)
 
-**The iOS version does not send this data** (it does not include Firebase).
+This section applies to both the Android and iOS versions. Because the iOS version offers audio translation (Audio) only, it sends the items below that relate to audio translation, purchases, and common features.
 
 To improve the quality of the Service, we collect and transmit the **usage data** listed below. It does not include information that directly identifies you personally, such as your name, email address, phone number, contacts, or precise location.
 
@@ -254,6 +254,16 @@ Data transmitted:
 - Display of the how-to guide, and the items chosen in it
 - Information automatically added by Firebase Analytics: a random identifier per app installation, the originating IP address (used by Google to estimate **approximate location, down to city level**; we do not obtain precise location such as from GPS), device model, device brand, screen resolution, OS version, app version, language setting, the app's install source, and basic events such as app launch and session start
 
+- **Additional items sent by the iOS version**:
+  - The stage at which audio translation could not start (for example, the screen-recording screen was closed without starting, the spoken and translation languages were the same, or consent to the explanation was needed), and how a session ended (stop button, the floating window was closed, screen recording was stopped, the app was terminated, and so on)
+  - The share of each session during which the app was in the background and during which the floating window (Picture in Picture) was shown, the number of times the floating window could not open, and the number of times the audio format changed
+  - The peak memory used by screen-recording processing, the highest thermal state of the device, whether Low Power Mode was on, and whether microphone audio arrived through screen recording (only whether it arrived; the audio itself is not used)
+  - How far you went through the first-launch guide (how many pages, whether you agreed or chose "Not now")
+  - Settings changes (display language, appearance, show original, and recognizing English audio; only the selected value)
+  - How "Send feedback" opened (mail composer, mail app, or contact page) and whether the email was sent from the composer
+  - Whether restoring purchases succeeded, purchases awaiting approval, and turning off auto-renewal (no transaction numbers or other identifiers are sent)
+  - Whether the app was installed from TestFlight (test distribution) or the App Store
+
 **What is not transmitted**: Text read by OCR, audio, speech recognition results, translation results, screen content or images, the title of content being played, and the name of the foreground app are **never included** in telemetry (everything above consists of counts, durations, success/failure, and similar aggregates).
 
 Recipients:
@@ -262,7 +272,7 @@ Recipients:
 - Privacy policy: [https://policies.google.com/privacy](https://policies.google.com/privacy)
 - The telemetry above is also stored per event in Google BigQuery (Google Cloud, United States) managed by the Developer, for analysis (see "4. Retention Periods" for how long)
 
-**Opt-out**: You can stop the transmissions described in this section at any time by turning off the switch at Settings → "Info & Privacy" → "Usage Data" in the Service. When it is off, nothing in this section is transmitted, including the automatic collection described above.
+**Opt-out**: You can stop the transmissions described in this section at any time by turning off the switch at Settings → "Info & Privacy" → "Usage Data" in the Service (on iOS: Settings → "Privacy" → "Usage Data"). When it is off, nothing in this section is transmitted, including the automatic collection described above.
 
 ### 3.3 Crash reports (Android only)
 
@@ -319,7 +329,7 @@ The relay server (Cloudflare Workers) and the network that carries audio run on 
 - **Early-tester application information (see 2.6)**: Deleted 90 days after the test ends. The waiting list is kept until the end of the next recruitment round and then deleted. The copies of received applications (Cloudflare) are deleted automatically after 60 days. If you would like your information deleted, please contact us at any time at the address at the end of this Policy (we will also remove you from the tester list in Google Play Console)
 - **On-device activity log (iOS, see 2.4)**: **The 10 most recent sessions** (one per app launch) are kept; older ones are deleted automatically when the app starts
 - **Counter retention**: Counters are aggregated counts per fixed period (1 minute, 1 hour, 1 day) and contain neither translation content nor records of individual uses
-- **Retention of usage data / crash reports (Android)**: Data transmitted under 3.2 and 3.3 is stored in Firebase and in Google BigQuery (United States) managed by the Developer. Event-level data is retained for **up to 14 months**, and data past that limit is deleted on a rolling basis. However, statistics aggregated so that individual events cannot be identified (such as daily usage counts and average processing times) may be retained beyond that limit. None of this includes OCR text, translation results, or screen content. If you turn off "Usage Data" or "Crash Reports" in settings, the corresponding data is no longer transmitted from then on
+- **Retention of usage data / crash reports**: Data transmitted under 3.2 and 3.3 is stored in Firebase and in Google BigQuery (United States) managed by the Developer. Event-level data is retained for **up to 14 months**, and data past that limit is deleted on a rolling basis. However, statistics aggregated so that individual events cannot be identified (such as daily usage counts and average processing times) may be retained beyond that limit. None of this includes OCR text, translation results, or screen content. If you turn off "Usage Data" or "Crash Reports" in settings, the corresponding data is no longer transmitted from then on
 
 ---
 
