@@ -7,7 +7,7 @@ description: Privacy Policy for LYR, a translation app for Android and iOS — w
 
 # Privacy Policy
 
-**Last updated**: 2026-10-26 (Revised for the launch of the iOS version. Main changes: 1 and 2 add the iOS version / 2.1, 2.2, 2.5, 3.2, 3.3 and 6 are marked as Android only / 2.3 adds how the iOS version captures audio, its recent-subtitle context and device identifier / 2.4 adds what the iOS version keeps on the device, including its activity log / 3.1 adds the route used by the iOS version / 3.5 adds paid-plan purchases (Google Play and App Store) / 4, 8 and 8-3 add how the iOS version is handled (the device identifier and activity log are excluded from backups) / 5 splits permissions into Android and iOS)
+**Last updated**: 2026-10-26 (Revised for the launch of the iOS version. Main changes: 1 and 2 add the iOS version / 2.1, 2.2, 2.5, 3.2, 3.3 and 6 are marked as Android only / 2.3 adds how the iOS version captures audio, its recent-subtitle context and device identifier / 2.4 adds what the iOS version keeps on the device, including its activity log / 3.1 adds the route used by the iOS version / 3.5 adds paid-plan purchases (Google Play and App Store) / 4, 8 and 8-3 add how the iOS version is handled (the device identifier and activity log are excluded from backups) / 5 splits permissions into Android and iOS / 3.5 adds feedback and inquiries (the iOS version receives them by email) and 4 adds how long we keep them)
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -294,7 +294,10 @@ The application information in 2.6 is stored and processed on the services of th
 (Apple Inc. (United States)). Payments are handled by each store. On iOS, purchases are verified on the device using the purchase
 record issued by Apple, and **the device identifier is not attached to the purchase record** (for Android, see the end of 2.2).
 
-**Feedback form**: When you send feedback from the app's settings screen or from the website, we use Google Forms (Google LLC (United States)). What is sent is the content you enter yourself, along with the app version, device model, OS version, and display language. Email addresses are not collected.
+**Feedback and inquiries**:
+- **Feedback form (such as from the Android app's settings screen)**: We receive it through Google Forms (Google LLC (United States)). What is sent is the content you enter yourself, along with the app version, device model, OS version, and display language. The "Contact" field is optional; if you fill it in, we use it only to contact you to ask more about your feedback
+- **Email (Send feedback in the iOS app's settings screen, and inquiries from our website)**: We receive these by email to hello@lyr.jp. In the iOS app, the app version, device model, OS version, and display language are added to the end of the email body in advance, and you can review or delete them before sending. Email is received through Google Workspace (Google LLC (United States))
+- We use the email addresses, contact details and content you send us only to reply to you, to investigate problems, and to improve the Service
 
 We do not provide information to any third parties other than those listed in 2.5 and 3.1 through 3.5. We do not use advertising networks and do not collect the advertising ID.
 
@@ -312,6 +315,7 @@ The relay server (Cloudflare Workers) and the network that carries audio run on 
 - **Inference server operational logs**: We record **only operational information** such as language, number of lines, processing time, audio duration, and whether an error occurred. **Audio, recognized text, text to be translated, and translation results are not recorded.** These logs contain no device identifier and are not in a form that can be linked to an individual user. Per-request records are overwritten oldest-first once they exceed a fixed size (100 MB × 2 generations). They are not taken off the server and are deleted when the server is decommissioned
 - **Relay server operational logs**: A feature of the relay server's provider (Cloudflare) keeps the error and status messages output by the Developer for about 10% of requests, for up to 7 days. **The device identifier, originating IP address, text to be translated, and translation results are not logged**
 - **Title of the content being played**: Up to 6 hours on the relay server (see 2.5). Mapping between extracted words and articles: up to 21 days. Daily per-language counts of extracted words: up to 60 days
+- **Feedback and inquiries (see 3.5)**: Deleted one year after we finish handling them (so that we can check the history if the same problem is reported again). If you would like them deleted, please contact us at any time at the address at the end of this Policy
 - **Early-tester application information (see 2.6)**: Deleted 90 days after the test ends. The waiting list is kept until the end of the next recruitment round and then deleted. The copies of received applications (Cloudflare) are deleted automatically after 60 days. If you would like your information deleted, please contact us at any time at the address at the end of this Policy (we will also remove you from the tester list in Google Play Console)
 - **On-device activity log (iOS, see 2.4)**: **The 10 most recent sessions** (one per app launch) are kept; older ones are deleted automatically when the app starts
 - **Counter retention**: Counters are aggregated counts per fixed period (1 minute, 1 hour, 1 day) and contain neither translation content nor records of individual uses
