@@ -64,6 +64,15 @@
           <img class="lg-logo" src="{{ '/logo-lyr.png' | relative_url }}" alt="LYR" width="333" height="120" />
         </a>
         <span class="lg-tag">Legal</span>
+        <!-- 言語の切り替え。アプリやサイトからはどちらか一方の言語で開かれるので、
+             読める言語へすぐ移れるよう、本文の末尾 (lg-switch) だけでなく上端にも置く。
+             索引 (/) は日英をまとめて載せているので出さない。 -->
+        {% unless page.url == '/' or page.url == '/index.html' %}
+        <nav class="lg-lang" aria-label="Language">
+          <a href="{{ '/' | append: doc | append: '.html' | relative_url }}" hreflang="ja" lang="ja"{% if lang == 'ja' %} aria-current="true"{% endif %}>日本語</a>
+          <a href="{{ '/en/' | append: doc | append: '.html' | relative_url }}" hreflang="en" lang="en"{% if lang == 'en' %} aria-current="true"{% endif %}>English</a>
+        </nav>
+        {% endunless %}
         <a class="lg-back" href="https://lyr.jp/">{{ back_label }}</a>
       </div>
     </header>

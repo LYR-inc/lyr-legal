@@ -57,6 +57,24 @@ img { max-width: 100%; display: block; }
   margin-left: auto; font-size: 13.5px; color: var(--dim); text-decoration: none;
 }
 .lg-back:hover { color: var(--accent); }
+/* 言語の切り替え (日本語 / English)。いまの言語を塗り、もう一方を押せるようにする。 */
+.lg-lang {
+  margin-left: auto; display: flex; padding: 2px;
+  border: 1px solid var(--line); border-radius: 999px;
+}
+.lg-lang a {
+  font-size: 12.5px; line-height: 1.4; color: var(--dim); text-decoration: none;
+  padding: 5px 11px; border-radius: 999px;
+}
+.lg-lang a:hover { color: var(--accent); }
+.lg-lang a[aria-current] { color: var(--fg); background: var(--bg-2); }
+.lg-lang ~ .lg-back { margin-left: 0; }
+/* スマホ幅ではロゴ・切り替え・戻るの 3 つに絞る (アプリの設定画面から開かれる幅) */
+@media (max-width: 480px) {
+  .lg-tag { display: none; }
+  .lg-head-inner { gap: 10px; }
+  .lg-back { font-size: 12.5px; }
+}
 
 /* ---- 本文 ---- */
 main { max-width: 46rem; margin: 0 auto; padding: 8px var(--pad) 72px; }
