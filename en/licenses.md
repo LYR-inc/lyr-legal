@@ -2,13 +2,13 @@
 layout: default
 lang: en
 title: Open Source Licenses
-description: Licenses and attribution for the open source software, fonts, and machine learning models used in LYR (Android screen translation app).
+description: Licenses and attribution for the open source software, fonts, and machine learning models used in LYR (a translation app for Android and iOS).
 ---
 
 # Open Source Licenses
 
-**Last updated**: 2026-XX-XX (Reflects moving speech recognition for Audio mode to servers and no longer distributing on-device speech recognition models or sherpa-onnx. Server-side models are listed for reference, and the attribution for speech recognition models distributed in earlier versions has moved to "Included in earlier versions".)
-**Applies to**: LYR (Android screen translation app)
+**Last updated**: 2026-10-26 (Reflects moving speech recognition for Audio mode to servers and no longer distributing on-device speech recognition models or sherpa-onnx. Server-side models are listed for reference, and the attribution for speech recognition models distributed in earlier versions has moved to "Included in earlier versions". Describes accurately how the speech bubble detection model was trained, and adds the iOS version.)
+**Applies to**: LYR (Android and iOS). The iOS app contains no third-party libraries and uses only frameworks provided by Apple. The server-side models in 4 and 5 are shared by both versions
 
 LYR uses the software, fonts, and machine learning models listed below. Copyright in each
 remains with its respective holder, and we use each item under the terms of its license.
@@ -59,10 +59,9 @@ PaddleOCR models.
 License: Apache License 2.0 / Source: [PaddlePaddle/PaddleOCR](https://github.com/PaddlePaddle/PaddleOCR)
 
 **Speech bubble detection model**
-The model that detects speech bubbles in manga follows the YOLOX-Nano design and was trained by us
-on synthetic data only.
+The model that detects speech bubbles in manga was further trained by us on synthetic data only,
+using the YOLOX training source code and starting from the pretrained YOLOX-Nano weights.
 YOLOX license: Apache License 2.0 / Source: [Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)
-[TO CONFIRM: whether YOLOX pretrained weights or source code were used — if only the design was followed, no attribution is required; decide whether to keep this paragraph]
 
 Other on-device models (for example, for tracking text regions) were designed and trained by us.
 
@@ -86,7 +85,7 @@ Translation is performed either by a translation model on servers operated by th
 an external translation API. The server-side translation model uses part of Qwen3.6-27B (Qwen team,
 Alibaba Cloud) to read the input, with the part that generates translations trained by us. It is
 not distributed as part of the app, but is listed for reference.
-Qwen license: Apache License 2.0 [TO CONFIRM: check the license stated on the Qwen3.6-27B model card] / Source: [Qwen](https://huggingface.co/Qwen)
+Qwen license: Apache License 2.0 / Source: [Qwen/Qwen3.6-27B](https://huggingface.co/Qwen/Qwen3.6-27B)
 
 ---
 
@@ -96,8 +95,7 @@ The current app contains no components licensed under Creative Commons Attributi
 
 ### Included in earlier versions
 
-Earlier versions of the app (versionCode 5–8, versions 0.2.0–0.2.3, distributed for testing)
-[TO CONFIRM: range of versions that used on-device recognition] performed speech recognition for
+Earlier versions of the app (versionCode 5–8, versions 0.2.0–0.2.3, distributed for testing) performed speech recognition for
 Audio mode on the device, downloading and using the speech recognition models below. We keep the
 attribution for anyone who still has those versions.
 
