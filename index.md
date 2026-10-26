@@ -1,12 +1,12 @@
 ---
 layout: default
 title: 法務文書
-description: LYR (Android 画面翻訳アプリ) の法務文書。
+description: LYR (Android・iOS の翻訳アプリ) の法務文書。
 ---
 
 # LYR Legal Documents
 
-LYR (Android 画面翻訳アプリ) の法務文書を掲載しています。
+LYR (Android・iOS の翻訳アプリ) の法務文書を掲載しています。
 
 ## 日本語 (原本)
 
