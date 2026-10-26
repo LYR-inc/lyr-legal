@@ -7,7 +7,7 @@ description: Terms of Service for LYR, a translation app for Android and iOS.
 
 # Terms of Service
 
-**Last updated**: [TBD] (Revised for the launch of the iOS version. Main changes: added the App Store to the distribution regions in Article 1 / added the iOS version to the description of the Service in Article 2 / added how the free plan, price display, subscriptions, cancellation, refunds and price changes work on the App Store in Article 3 / added audio to Article 6 / added Article 12 (iOS version obtained from the App Store) and moved Contact to Article 13)
+**Last updated**: 2026-10-26 (Revised for the launch of the iOS version. Main changes: added the App Store to the distribution regions in Article 1 / added the iOS version to the description of the Service in Article 2 / added how the free plan, price display, subscriptions, cancellation, refunds and price changes work on the App Store in Article 3 / added audio to Article 6 / added Article 12 (iOS version obtained from the App Store) and moved Contact to Article 13)
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
