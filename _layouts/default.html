@@ -20,6 +20,8 @@
   {%- assign alt_label = '日本語' -%}
   {%- assign back_label = 'Back to lyr.jp →' -%}
   {%- assign og_locale = 'en_US' -%}
+  {%- assign updated_label = 'Last updated: ' -%}
+  {%- assign updated_date = page.updated | date: '%B %-d, %Y' -%}
 {%- else -%}
   {%- assign privacy_url = '/privacy.html' -%}
   {%- assign terms_url = '/terms.html' -%}
@@ -31,6 +33,8 @@
   {%- assign alt_label = 'English' -%}
   {%- assign back_label = 'lyr.jp へ戻る →' -%}
   {%- assign og_locale = 'ja_JP' -%}
+  {%- assign updated_label = '最終更新日：' -%}
+  {%- assign updated_date = page.updated | date: '%Y年%-m月%-d日' -%}
 {%- endif -%}
 <html lang="{{ lang }}">
   <head>
@@ -64,21 +68,33 @@
           <img class="lg-logo" src="{{ '/logo-lyr.png' | relative_url }}" alt="LYR" width="333" height="120" />
         </a>
         <span class="lg-tag">Legal</span>
-        <!-- 言語の切り替え。アプリやサイトからはどちらか一方の言語で開かれるので、
-             読める言語へすぐ移れるよう、本文の末尾 (lg-switch) だけでなく上端にも置く。
-             索引 (/) は日英をまとめて載せているので出さない。 -->
-        {% unless page.url == '/' or page.url == '/index.html' %}
-        <nav class="lg-lang" aria-label="Language">
-          <a href="{{ '/' | append: doc | append: '.html' | relative_url }}" hreflang="ja" lang="ja"{% if lang == 'ja' %} aria-current="true"{% endif %}>日本語</a>
-          <a href="{{ '/en/' | append: doc | append: '.html' | relative_url }}" hreflang="en" lang="en"{% if lang == 'en' %} aria-current="true"{% endif %}>English</a>
-        </nav>
-        {% endunless %}
         <a class="lg-back" href="https://lyr.jp/">{{ back_label }}</a>
       </div>
     </header>
 
     <main>
       <div class="lg-doc">
+        {% unless page.url == '/' or page.url == '/index.html' %}
+        <!-- 文書の頭: 言語の選択 → 最終更新日 → タイトル (2026-10-27 利用者の指定。OpenAI のポリシーの並びに寄せる)。
+             アプリやサイトからはどちらか一方の言語で開かれるので、読める言語へすぐ移れるよう先頭に置く。
+             変更点の一覧は末尾の「改定履歴」にある。 -->
+        <div class="lg-top">
+          <div class="lg-langsel">
+            <select aria-label="Language" onchange="location.href = this.value">
+              <option value="{{ '/' | append: doc | append: '.html' | relative_url }}" lang="ja"{% if lang == 'ja' %} selected{% endif %}>日本語</option>
+              <option value="{{ '/en/' | append: doc | append: '.html' | relative_url }}" lang="en"{% if lang == 'en' %} selected{% endif %}>English</option>
+            </select>
+          </div>
+          <noscript>
+            <p class="lg-langsel-links">
+              <a href="{{ '/' | append: doc | append: '.html' | relative_url }}" lang="ja">日本語</a> /
+              <a href="{{ '/en/' | append: doc | append: '.html' | relative_url }}" lang="en">English</a>
+            </p>
+          </noscript>
+          {% if page.updated %}<p class="lg-updated">{{ updated_label }}<time datetime="{{ page.updated | date: '%Y-%m-%d' }}">{{ updated_date }}</time></p>{% endif %}
+          <h1 class="lg-title">{{ page.title }}</h1>
+        </div>
+        {% endunless %}
         {{ content }}
 
         <!-- アプリの設定画面からは1文書だけを開くため、他文書への導線がここにないと

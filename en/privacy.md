@@ -3,14 +3,11 @@ layout: default
 lang: en
 title: Privacy Policy
 description: Privacy Policy for LYR, a translation app for Android and iOS — what we collect, why, who we share it with, and how long we keep it.
+updated: 2026-10-27
 ---
 
-# Privacy Policy
 
-**Last updated**: 2026-10-27 (Revised so that the iOS version also sends usage data. Main changes: 3.2 now applies to both the Android and iOS versions and lists what the iOS version additionally sends and how to turn it off / 2.4 refers to 3.2 for the iOS version / 4 applies the retention period for usage data to both versions / 3.5 adds that iOS purchases are managed through RevenueCat)
-**Brand / App name**: LYR (the "Service")  
-**Developer**: Kento Nakai (individual developer, the "Developer")  
-**Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
+In this document, LYR is referred to as the "Service" and its developer, Kento Nakai (an individual developer), as the "Developer". Contact: [hello@lyr.jp](mailto:hello@lyr.jp)
 
 > **This is a translation.** The Japanese version of this Privacy Policy is the original. If there is any discrepancy between the two, [the Japanese version](../privacy.html) prevails.
 
@@ -450,3 +447,13 @@ For questions about this Policy, please contact us at:
 ## 11. Governing Law
 
 This Policy is governed by the laws of Japan.
+
+---
+
+## Revision history
+
+- **2026-10-27**: Revised so that the iOS version also sends usage data. Main changes: 3.2 now applies to both the Android and iOS versions and lists what the iOS version additionally sends and how to turn it off / 2.4 refers to 3.2 for the iOS version / 4 applies the retention period for usage data to both versions / 3.5 adds that iOS purchases are managed through RevenueCat
+- **2026-10-26**: Revised for the launch of the iOS version. Main changes: 1 and 2 add the iOS version / 2.1, 2.2, 2.5, 3.2, 3.3 and 6 are marked as Android only / 2.3 adds how the iOS version captures audio, its recent-subtitle context and device identifier / 2.4 adds what the iOS version keeps on the device, including its activity log / 3.1 adds the route used by the iOS version / 3.5 adds paid-plan purchases (Google Play and App Store) / 4, 8 and 8-3 add how the iOS version is handled (the device identifier and activity log are excluded from backups) / 5 splits permissions into Android and iOS / 3.5 adds feedback and inquiries (the iOS version receives them by email) and 4 adds how long we keep them
+- **2026-10-23**: Reviewed throughout to match the current translation routes. Main changes: 1 adds the scope (early tester application form) / 2.2 adds recent translation history (context) and the case where Live sends text directly to the inference servers / 2.3 corrects how audio is routed and how the device identifier is handled / new 2.5 "Title of the content being played" and 2.6 "Early tester recruitment" / 3.1 adds which route is used, what is sent, and the recipient countries (EU member states added) / 3.2 updates the data sent to match the app / new 3.4 on where tester applications are stored / 4 adds server logs, titles and application data retention / 5 and 6 update the permissions and Accessibility Service descriptions
+- **2026-08-08**: Added the handling of audio being played (2.3) and the `RECORD_AUDIO` permission for Audio mode. Clarified that speech recognition runs on-device, that audio is never transmitted, and that the microphone is not used.
+- **2026-08-03**: Aligned the usage-data description with the actual GA4 settings: stated the granularity of location estimation (city level) and the device information collected. Added the age 14 threshold for South Korea. Reorganized the disclosures on transfers outside Japan; documented the handling terms agreed with the translation API provider and the Zero Data Retention setting. Includes the countries where inference servers are located, a caution about information visible on your screen, how to request disclosure and where to file complaints, security measures, and the scope of Accessibility Service use.
