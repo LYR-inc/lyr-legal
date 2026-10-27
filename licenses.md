@@ -6,7 +6,7 @@ description: LYR (Android・iOS の翻訳アプリ) が利用しているオー�
 
 # ライセンス表記
 
-**最終更新日**: 2026-10-27 (iOS 版に Firebase Analytics を組み込んだことを反映し、「1. ソフトウェアライブラリ」に iOS 版の一覧を追記)
+**最終更新日**: 2026-10-27 (iOS 版に Firebase Analytics と RevenueCat を組み込んだことを反映し、「1. ソフトウェアライブラリ」に iOS 版の一覧を追記)
 **対象**: LYR (Android 版・iOS 版)。iOS 版のアプリは、Apple が提供するフレームワークのほか、「1」の「iOS 版」に掲げるライブラリを使用しています。「4」「5」のサーバー側のモデルは両方の版で共通です
 
 本サービスは、以下のソフトウェア・フォント・機械学習モデルを利用しています。各項目の著作権は
@@ -42,6 +42,7 @@ description: LYR (Android・iOS の翻訳アプリ) が利用しているオー�
 | GoogleUtilities | Apache License 2.0 | [google/GoogleUtilities](https://github.com/google/GoogleUtilities) |
 | Promises (FBLPromises) | Apache License 2.0 | [google/promises](https://github.com/google/promises) |
 | nanopb | zlib License | [nanopb/nanopb](https://github.com/nanopb/nanopb) |
+| RevenueCat (purchases-ios) | MIT License | [RevenueCat/purchases-ios](https://github.com/RevenueCat/purchases-ios) |
 
 Google App Measurement（Firebase Analytics の計測部分）はバイナリで提供されており、
 [Google API 利用規約](https://developers.google.com/terms) に基づいて利用しています。

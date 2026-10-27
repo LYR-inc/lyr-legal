@@ -7,7 +7,7 @@ description: Privacy Policy for LYR, a translation app for Android and iOS — w
 
 # Privacy Policy
 
-**Last updated**: 2026-10-27 (Revised so that the iOS version also sends usage data. Main changes: 3.2 now applies to both the Android and iOS versions and lists what the iOS version additionally sends and how to turn it off / 2.4 refers to 3.2 for the iOS version / 4 applies the retention period for usage data to both versions)
+**Last updated**: 2026-10-27 (Revised so that the iOS version also sends usage data. Main changes: 3.2 now applies to both the Android and iOS versions and lists what the iOS version additionally sends and how to turn it off / 2.4 refers to 3.2 for the iOS version / 4 applies the retention period for usage data to both versions / 3.5 adds that iOS purchases are managed through RevenueCat)
 **Brand / App name**: LYR (the "Service")  
 **Developer**: Kento Nakai (individual developer, the "Developer")  
 **Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
@@ -301,8 +301,13 @@ The application information in 2.6 is stored and processed on the services of th
 ### 3.5 Other
 
 **Paid-plan purchases**: On Android the paid plan is purchased on Google Play (Google LLC (United States)); on iOS, on the App Store
-(Apple Inc. (United States)). Payments are handled by each store. On iOS, purchases are verified on the device using the purchase
-record issued by Apple, and **the device identifier is not attached to the purchase record** (for Android, see the end of 2.2).
+(Apple Inc. (United States)). Payments are handled by each store. On iOS, verifying purchases and managing the state of the paid plan
+(reflecting renewals, cancellations and refunds) are entrusted to **RevenueCat (RevenueCat, Inc. (United States), a processor)**. We send
+RevenueCat the purchase record issued by Apple and a random identifier that RevenueCat creates for each installation of the app (it is not
+tied to any login, name or email address). Only if you allow usage data (3.2) to be sent, we also pass the Firebase app instance ID to
+RevenueCat so that RevenueCat sends the number and amount of purchases and renewals to Google Analytics for revenue reporting.
+**The device identifier is not passed to RevenueCat and is not attached to the purchase record** (for Android, see the end of 2.2).
+Purchase records are kept by RevenueCat for as long as needed to manage the state of the paid plan.
 
 **Feedback and inquiries**:
 - **Feedback form (such as from the Android app's settings screen)**: We receive it through Google Forms (Google LLC (United States)). What is sent is the content you enter yourself, along with the app version, device model, OS version, and display language. The "Contact" field is optional; if you fill it in, we use it only to contact you to ask more about your feedback
