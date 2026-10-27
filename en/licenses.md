@@ -7,7 +7,7 @@ description: Licenses and attribution for the open source software, fonts, and m
 
 # Open Source Licenses
 
-**Last updated**: 2026-10-27 (Reflects adding Firebase Analytics to the iOS version, and adds the list for the iOS version to "1. Software libraries")
+**Last updated**: 2026-10-27 (Reflects adding Firebase Analytics and RevenueCat to the iOS version, and adds the list for the iOS version to "1. Software libraries")
 **Applies to**: LYR (Android and iOS). In addition to frameworks provided by Apple, the iOS app uses the libraries listed under "iOS" in 1. The server-side models in 4 and 5 are shared by both versions
 
 LYR uses the software, fonts, and machine learning models listed below. Copyright in each
@@ -43,6 +43,7 @@ remains with its respective holder, and we use each item under the terms of its 
 | GoogleUtilities | Apache License 2.0 | [google/GoogleUtilities](https://github.com/google/GoogleUtilities) |
 | Promises (FBLPromises) | Apache License 2.0 | [google/promises](https://github.com/google/promises) |
 | nanopb | zlib License | [nanopb/nanopb](https://github.com/nanopb/nanopb) |
+| RevenueCat (purchases-ios) | MIT License | [RevenueCat/purchases-ios](https://github.com/RevenueCat/purchases-ios) |
 
 Google App Measurement (the measurement part of Firebase Analytics) is distributed as a binary and is
 used under the [Google APIs Terms of Service](https://developers.google.com/terms).
