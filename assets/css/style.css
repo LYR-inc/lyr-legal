@@ -28,8 +28,8 @@ body {
   background: var(--bg);
   color: var(--fg);
   font-family: var(--sans);
-  font-size: 16px;
-  line-height: 1.9;
+  font-size: 17px;
+  line-height: 1.95;
   -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
@@ -57,19 +57,7 @@ img { max-width: 100%; display: block; }
   margin-left: auto; font-size: 13.5px; color: var(--dim); text-decoration: none;
 }
 .lg-back:hover { color: var(--accent); }
-/* 言語の切り替え (日本語 / English)。いまの言語を塗り、もう一方を押せるようにする。 */
-.lg-lang {
-  margin-left: auto; display: flex; padding: 2px;
-  border: 1px solid var(--line); border-radius: 999px;
-}
-.lg-lang a {
-  font-size: 12.5px; line-height: 1.4; color: var(--dim); text-decoration: none;
-  padding: 5px 11px; border-radius: 999px;
-}
-.lg-lang a:hover { color: var(--accent); }
-.lg-lang a[aria-current] { color: var(--fg); background: var(--bg-2); }
-.lg-lang ~ .lg-back { margin-left: 0; }
-/* スマホ幅ではロゴ・切り替え・戻るの 3 つに絞る (アプリの設定画面から開かれる幅) */
+/* スマホ幅ではロゴと戻るの 2 つに絞る (アプリの設定画面から開かれる幅) */
 @media (max-width: 480px) {
   .lg-tag { display: none; }
   .lg-head-inner { gap: 10px; }
@@ -80,24 +68,38 @@ img { max-width: 100%; display: block; }
 main { max-width: 46rem; margin: 0 auto; padding: 8px var(--pad) 72px; }
 .lg-doc { max-width: 42em; }
 
-h1 {
-  font-size: clamp(26px, 5vw, 34px); line-height: 1.3; font-weight: 760;
-  letter-spacing: -.015em; margin: 40px 0 8px;
+/* ---- 文書の頭 (言語の選択 → 最終更新日 → タイトル) ---- */
+.lg-top { text-align: center; margin: 32px 0 40px; }
+/* 言語の選択。幅いっぱいの選択の欄にして、押せる場所だと一目で分かるようにする */
+.lg-langsel { position: relative; text-align: left; }
+.lg-langsel select {
+  -webkit-appearance: none; appearance: none; width: 100%;
+  font: inherit; font-size: 16px; color: var(--fg);
+  background: var(--bg); border: 1px solid var(--line); border-radius: 8px;
+  padding: 12px 44px 12px 16px; cursor: pointer;
 }
-/* 「最終更新日 / アプリ名 / 発行主体 / 連絡先」の塊。
-   本文と同じ見た目だと属性情報が本文に埋もれるので、囲って落ち着かせる。 */
-h1 + p {
-  margin: 0 0 8px; padding: 16px 18px;
-  background: var(--bg-2); border: 1px solid var(--line); border-radius: 10px;
-  font-size: 14px; line-height: 2; color: var(--dim);
+.lg-langsel select:hover { border-color: var(--dim); }
+.lg-langsel select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lg-langsel::after {   /* 下向きの印 */
+  content: ""; position: absolute; right: 18px; top: 50%;
+  width: 8px; height: 8px; margin-top: -6px;
+  border-right: 1.5px solid var(--fg); border-bottom: 1.5px solid var(--fg);
+  transform: rotate(45deg); pointer-events: none;
 }
-h1 + p strong { color: var(--fg); font-weight: 650; }
+.lg-langsel-links { font-size: 14px; }
+.lg-updated { margin: 40px 0 0; font-size: 15px; color: var(--fg); }
+h1, .lg-title {
+  /* スマホで「プライバシーポリシー」(10 字) が 1 行に収まる大きさ。幅 360px (本文 320px) で 28px = 280px。
+     8vw は 390px 幅で 31px。広い画面では 46px で止める */
+  font-size: clamp(26px, 8vw, 46px); line-height: 1.25; font-weight: 700;
+  letter-spacing: -.02em; margin: 18px 0 0;
+}
 
 h2 {
-  font-size: 20px; font-weight: 720; letter-spacing: -.01em;
-  margin: 48px 0 12px; padding-top: 4px;
+  font-size: 24px; font-weight: 720; letter-spacing: -.01em;
+  margin: 56px 0 14px; padding-top: 4px;
 }
-h3 { font-size: 16.5px; font-weight: 700; margin: 30px 0 8px; color: var(--fg); }
+h3 { font-size: 18px; font-weight: 700; margin: 30px 0 8px; color: var(--fg); }
 p, li { color: #d7dade; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
@@ -135,8 +137,9 @@ code {
 .lg-foot {
   border-top: 1px solid var(--line);
   padding: 28px var(--pad) 56px;
-  font-family: var(--mono); font-size: 12.5px; color: var(--faint);
+  /* --faint (#5c616a) は墨の上で 3.2:1 しか無いので、読ませる文字には --dim を使う */
+  font-family: var(--mono); font-size: 12.5px; color: var(--dim);
 }
 .lg-foot-inner { max-width: 46rem; margin: 0 auto; display: flex; gap: 18px; flex-wrap: wrap; }
-.lg-foot a { color: var(--faint); }
+.lg-foot a { color: var(--dim); }
 .lg-foot a:hover { color: var(--accent); }

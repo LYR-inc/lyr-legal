@@ -3,14 +3,11 @@ layout: default
 lang: en
 title: Terms of Service
 description: Terms of Service for LYR, a translation app for Android and iOS.
+updated: 2026-10-26
 ---
 
-# Terms of Service
 
-**Last updated**: 2026-10-26 (Revised for the launch of the iOS version. Main changes: added the App Store to the distribution regions in Article 1 / added the iOS version to the description of the Service in Article 2 / added how the free plan, price display, subscriptions, cancellation, refunds and price changes work on the App Store in Article 3 / added audio to Article 6 / added Article 12 (iOS version obtained from the App Store) and moved Contact to Article 13)
-**Brand / App name**: LYR (the "Service")  
-**Developer**: Kento Nakai (individual developer, the "Developer")  
-**Contact**: [hello@lyr.jp](mailto:hello@lyr.jp)
+In this document, LYR is referred to as the "Service" and its developer, Kento Nakai (an individual developer), as the "Developer". Contact: [hello@lyr.jp](mailto:hello@lyr.jp)
 
 > **This is a translation.** The Japanese version of these Terms is the original. If there is any discrepancy between the two, [the Japanese version](../terms.html) prevails.
 
@@ -137,3 +134,13 @@ Handling of user information is governed by the separately established Privacy P
 For questions about these Terms, please contact us at:
 
 - **Email**: [hello@lyr.jp](mailto:hello@lyr.jp)
+
+---
+
+## Revision history
+
+- **2026-10-26**: Revised for the launch of the iOS version. Main changes: added the App Store to the distribution regions in Article 1 / added the iOS version to the description of the Service in Article 2 / added how the free plan, price display, subscriptions, cancellation, refunds and price changes work on the App Store in Article 3 / added audio to Article 6 / added Article 12 (iOS version obtained from the App Store) and moved Contact to Article 13
+- **2026-10-23**: Revised the description of the Service in Article 2 to reflect the current combination of translation and speech recognition on servers operated by the Developer and an external translation API, and added Audio. Added Switzerland to the regions in Article 1, the technical limits that also apply to the paid plan in Article 3, and the handling of server outages in Article 7.
+- **2026-08-08**: Added audio translation (Audio) to the credit consumption rates in Article 3. It consumes credits at the same rate as Live (1 credit per 30 seconds) and shares the existing allowance.
+- **2026-08-03**: Added a clause on use by minors to Article 1. Rewrote Article 3 to match the implementation: documented the free plan's credit system, shared between screen translation and real-time translation, and added terms on automatic renewal, cancellation, refunds, and price changes for subscriptions
+- **2026-08-02**: Updated the issuing entity and contact details

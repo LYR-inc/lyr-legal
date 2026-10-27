@@ -3,11 +3,10 @@ layout: default
 lang: en
 title: Open Source Licenses
 description: Licenses and attribution for the open source software, fonts, and machine learning models used in LYR (a translation app for Android and iOS).
+updated: 2026-10-27
 ---
 
-# Open Source Licenses
 
-**Last updated**: 2026-10-27 (Reflects adding Firebase Analytics and RevenueCat to the iOS version, and adds the list for the iOS version to "1. Software libraries")
 **Applies to**: LYR (Android and iOS). In addition to frameworks provided by Apple, the iOS app uses the libraries listed under "iOS" in 1. The server-side models in 4 and 5 are shared by both versions
 
 LYR uses the software, fonts, and machine learning models listed below. Copyright in each
@@ -178,3 +177,11 @@ If you find an error or omission on this page, please let us know and we will re
 correct it promptly.
 
 [hello@lyr.jp](mailto:hello@lyr.jp)
+
+---
+
+## Revision history
+
+- **2026-10-27**: Reflects adding Firebase Analytics and RevenueCat to the iOS version, and adds the list for the iOS version to "1. Software libraries"
+- **2026-10-26**: Reflects moving speech recognition for Audio mode to servers and no longer distributing on-device speech recognition models or sherpa-onnx. Server-side models are listed for reference, and the attribution for speech recognition models distributed in earlier versions has moved to "Included in earlier versions". Describes accurately how the speech bubble detection model was trained, and adds the iOS version.
+- **2026-08-06**: Initial version
