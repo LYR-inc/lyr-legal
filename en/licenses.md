@@ -3,7 +3,7 @@ layout: default
 lang: en
 title: Open Source Licenses
 description: Licenses and attribution for the open source software, fonts, and machine learning models used in LYR (a translation app for Android and iOS).
-updated: 2026-10-27
+updated: 2026-10-29
 ---
 
 
@@ -171,6 +171,27 @@ Those versions used sherpa-onnx (Apache License 2.0, [k2-fsa/sherpa-onnx](https:
 
 ---
 
+## 6. Artwork and trademarks on the website (lyr.jp) {#trademarks}
+
+The website lyr.jp uses the following artwork and names to indicate supported operating systems.
+
+### Android robot
+
+- **Where it is used**: The icon indicating the Android version on the lyr.jp home page and the early tester page
+- **Attribution**: The Android robot is reproduced or modified from work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License.
+- **License**: [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
+- **Changes**: Only the head is redrawn as a single-color shape
+
+### Trademarks
+
+- Android is a trademark of Google LLC.
+- iPhone is a trademark of Apple Inc., registered in the U.S. and other countries.
+- App Store is a service mark of Apple Inc. Google Play is a trademark of Google LLC.
+
+The Service is not provided or endorsed by Google LLC or Apple Inc.
+
+---
+
 ## Contact
 
 If you find an error or omission on this page, please let us know and we will review and
@@ -182,6 +203,7 @@ correct it promptly.
 
 ## Revision history
 
+- **2026-10-29**: Added "6. Artwork and trademarks on the website (lyr.jp)", with the attribution for the Android robot and trademark notices for Android, iPhone and others
 - **2026-10-27**: Reflects adding Firebase Analytics and RevenueCat to the iOS version, and adds the list for the iOS version to "1. Software libraries"
 - **2026-10-26**: Reflects moving speech recognition for Audio mode to servers and no longer distributing on-device speech recognition models or sherpa-onnx. Server-side models are listed for reference, and the attribution for speech recognition models distributed in earlier versions has moved to "Included in earlier versions". Describes accurately how the speech bubble detection model was trained, and adds the iOS version.
 - **2026-08-06**: Initial version
