@@ -3,7 +3,7 @@ layout: default
 lang: en
 title: Privacy Policy
 description: Privacy Policy for LYR, a translation app for Android and iOS — what we collect, why, who we share it with, and how long we keep it.
-updated: 2026-10-27
+updated: 2026-10-29
 ---
 
 
@@ -15,7 +15,7 @@ In this document, LYR is referred to as the "Service" and its developer, Kento N
 
 ## 1. Introduction
 
-This Privacy Policy explains how LYR (the "Service") handles your information. In addition to the app (Android and iOS versions), this Policy also applies to the early-tester application form on the website lyr.jp (see 2.6). By using the Service, you are deemed to have agreed to this Policy.
+This Privacy Policy explains how LYR (the "Service") handles your information. In addition to the app (Android and iOS versions), this Policy also applies to the early-tester application form (see 2.6) and the iOS release notification sign-up form (see 2.7) on the website lyr.jp. By using the Service, you are deemed to have agreed to this Policy.
 
 **Where the Service is offered**: The Service is offered to users in the countries and regions the Developer has selected for distribution on Google Play and the App Store. **It is not offered in the European Economic Area (EEA), the United Kingdom, Switzerland, Türkiye, Russia, mainland China, Vietnam, or Indonesia.** Use from those regions is not contemplated, and the Service is not offered or advertised to users there.
 
@@ -183,6 +183,19 @@ To recruit early testers for the Service, the application form on the website (l
 - **Linking with the app**: Application information is not used in combination with the app's device identifier or with the content of your translations (linking them through the coupon code is technically possible, but it is not used for anything other than running the test). The table matching the coupon codes sent to testers with their email addresses is kept in the same Google Sheet as the applicant list (see 3.4) and is accessible only under the Developer's account
 - **What we do not send**: We do not send unsolicited promotional email. Links in our emails do not contain any mechanism for tracking opens or clicks
 
+### 2.7 iOS release notification sign-up (sign-up form on the website lyr.jp)
+
+To let you know when the iOS version is released on the App Store, the sign-up form on the website (lyr.jp) accepts the following information. It is not required to use the app.
+
+- **Information collected**: Your email address, the date and time you signed up, the language of the page you signed up from, the country estimated from your connection, information showing which ad or link brought you to the form (UTM parameters: source, medium, campaign name, and ad content), and, if you choose to answer, whether you are "also interested in testing before the official release"
+- **Purposes**:
+  - Confirming your sign-up and notifying you when the iOS version is released (including a link to the App Store)
+  - Inviting those who answered that they are interested in testing before the release to a test (Apple TestFlight). If you accept the invitation and join, your email address is added to the tester list in Apple's App Store Connect, only as needed to run the test
+  - Aggregation to learn which ads and links bring the most sign-ups (handled as counts per campaign; not used for ad delivery or any other purpose)
+- **Preventing repeated submissions**: As in 2.6, the originating IP address is hashed and used only to count the number of sign-ups
+- **Relationship with early tester recruitment (2.6)**: Sign-ups are handled separately from early-tester applications and do not count toward the early-tester capacity. You can sign up for both with the same email address
+- **What we do not send**: We only send information about the iOS release and the test. We do not send unsolicited promotional email. Links in our emails do not contain any mechanism for tracking opens or clicks
+
 ---
 
 ## 3. Disclosure to Third Parties / Transfers Outside Japan
@@ -288,12 +301,13 @@ When the app terminates abnormally or an unexpected error occurs, the following 
 
 **Opt-out**: You can stop the transmissions described in this section at any time by turning off the switch at Settings → "Info & Privacy" → "Crash Reports" in the Service. This is a separate switch from "3.2 Usage Data"; each can be toggled independently.
 
-### 3.4 Where early-tester application data is held
+### 3.4 Where early-tester application data and iOS sign-up data are held
 
-The application information in 2.6 is stored and processed on the services of the following providers. All are managed under the Developer's own accounts and are not used for any other purpose.
+The application information in 2.6 and the sign-up information in 2.7 are stored and processed on the services of the following providers. All are managed under the Developer's own accounts and are not used for any other purpose.
 
 - **Google LLC (United States)**: The list of applicants and the coupon code table (Google Sheets) and sending email (Google Workspace); registering testers for Google Play (Google Play Console), and the list file used for that registration (Google Drive)
-- **Cloudflare, Inc. (United States)**: Receiving submissions from the application form (Cloudflare Workers); a copy of each received application (temporary storage so that no application is lost)
+- **Cloudflare, Inc. (United States)**: Receiving submissions from the application and sign-up forms (Cloudflare Workers); a copy of each received application or sign-up (temporary storage so that none is lost)
+- **Apple Inc. (United States)**: Registering testers (App Store Connect), only for those who accept the test invitation described in 2.7
 
 ### 3.5 Other
 
@@ -329,6 +343,7 @@ The relay server (Cloudflare Workers) and the network that carries audio run on 
 - **Title of the content being played**: Up to 6 hours on the relay server (see 2.5). Mapping between extracted words and articles: up to 21 days. Daily per-language counts of extracted words: up to 60 days
 - **Feedback and inquiries (see 3.5)**: Deleted one year after we finish handling them (so that we can check the history if the same problem is reported again). If you would like them deleted, please contact us at any time at the address at the end of this Policy
 - **Early-tester application information (see 2.6)**: Deleted 90 days after the test ends. The waiting list is kept until the end of the next recruitment round and then deleted. The copies of received applications (Cloudflare) are deleted automatically after 60 days. If you would like your information deleted, please contact us at any time at the address at the end of this Policy (we will also remove you from the tester list in Google Play Console)
+- **iOS release notification sign-up information (see 2.7)**: Deleted 90 days after we notify you of the iOS release (so that we can answer questions such as a notification not arriving). The copies of received sign-ups (Cloudflare) are deleted automatically after 60 days. If you would like your information deleted, please contact us at any time at the address at the end of this Policy
 - **On-device activity log (iOS, see 2.4)**: **The 10 most recent sessions** (one per app launch) are kept; older ones are deleted automatically when the app starts
 - **Counter retention**: Counters are aggregated counts per fixed period (1 minute, 1 hour, 1 day) and contain neither translation content nor records of individual uses
 - **Retention of usage data / crash reports**: Data transmitted under 3.2 and 3.3 is stored in Firebase and in Google BigQuery (United States) managed by the Developer. Event-level data is retained for **up to 14 months**, and data past that limit is deleted on a rolling basis. However, statistics aggregated so that individual events cannot be identified (such as daily usage counts and average processing times) may be retained beyond that limit. None of this includes OCR text, translation results, or screen content. If you turn off "Usage Data" or "Crash Reports" in settings, the corresponding data is no longer transmitted from then on
@@ -452,6 +467,7 @@ This Policy is governed by the laws of Japan.
 
 ## Revision history
 
+- **2026-10-29**: Revised to start iOS release notification sign-ups. Main changes: new 2.7 "iOS release notification sign-up" / 1 adds the sign-up form to the scope / 3.4 adds where sign-up data is held (including Apple) / 4 adds how long sign-up data is kept
 - **2026-10-27**: Revised so that the iOS version also sends usage data. Main changes: 3.2 now applies to both the Android and iOS versions and lists what the iOS version additionally sends and how to turn it off / 2.4 refers to 3.2 for the iOS version / 4 applies the retention period for usage data to both versions / 3.5 adds that iOS purchases are managed through RevenueCat
 - **2026-10-26**: Revised for the launch of the iOS version. Main changes: 1 and 2 add the iOS version / 2.1, 2.2, 2.5, 3.2, 3.3 and 6 are marked as Android only / 2.3 adds how the iOS version captures audio, its recent-subtitle context and device identifier / 2.4 adds what the iOS version keeps on the device, including its activity log / 3.1 adds the route used by the iOS version / 3.5 adds paid-plan purchases (Google Play and App Store) / 4, 8 and 8-3 add how the iOS version is handled (the device identifier and activity log are excluded from backups) / 5 splits permissions into Android and iOS / 3.5 adds feedback and inquiries (the iOS version receives them by email) and 4 adds how long we keep them
 - **2026-10-23**: Reviewed throughout to match the current translation routes. Main changes: 1 adds the scope (early tester application form) / 2.2 adds recent translation history (context) and the case where Live sends text directly to the inference servers / 2.3 corrects how audio is routed and how the device identifier is handled / new 2.5 "Title of the content being played" and 2.6 "Early tester recruitment" / 3.1 adds which route is used, what is sent, and the recipient countries (EU member states added) / 3.2 updates the data sent to match the app / new 3.4 on where tester applications are stored / 4 adds server logs, titles and application data retention / 5 and 6 update the permissions and Accessibility Service descriptions

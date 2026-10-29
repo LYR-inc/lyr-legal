@@ -2,7 +2,7 @@
 layout: default
 title: ライセンス表記
 description: LYR (Android・iOS の翻訳アプリ) が利用しているオープンソースソフトウェア、フォント、機械学習モデルのライセンスと帰属表示。
-updated: 2026-10-27
+updated: 2026-10-29
 ---
 
 
@@ -170,6 +170,27 @@ Qwen のライセンス: Apache License 2.0 / 出典: [Qwen/Qwen3.6-27B](https:/
 
 ---
 
+## 6. ウェブサイト (lyr.jp) の図版と商標 {#trademarks}
+
+ウェブサイト lyr.jp では、対応する OS を示すために次の図版と名称を使用しています。
+
+### Android ロボット
+
+- **使用箇所**: lyr.jp のトップページ・先行テスター募集ページの、Android 版を示すアイコン
+- **帰属表示**: Android ロボットは、Google が作成および提供している作品から複製または変更したものであり、クリエイティブ・コモンズ表示 3.0 ライセンスに記載された条件に従って使用しています。
+- **ライセンス**: [Creative Commons Attribution 3.0 Unported (CC BY 3.0)](https://creativecommons.org/licenses/by/3.0/)
+- **変更の有無**: 頭部だけを単色の図形に描き直しています
+
+### 商標
+
+- Android は Google LLC の商標です。
+- iPhone は、米国および他の国々で登録された Apple Inc. の商標です。iPhone の商標は、アイホン株式会社のライセンスに基づき使用されています。
+- App Store は Apple Inc. のサービスマークです。Google Play は Google LLC の商標です。
+
+本サービスは、Google LLC および Apple Inc. が提供・承認するものではありません。
+
+---
+
 ## お問い合わせ
 
 本ページの記載内容について誤り・不足がありましたら、下記までご連絡ください。
@@ -181,6 +202,7 @@ Qwen のライセンス: Apache License 2.0 / 出典: [Qwen/Qwen3.6-27B](https:/
 
 ## 改定履歴
 
+- **2026-10-29**: 「6. ウェブサイト (lyr.jp) の図版と商標」を新設し、Android ロボットの帰属表示と、Android・iPhone などの商標の表記を追記
 - **2026-10-27**: iOS 版に Firebase Analytics と RevenueCat を組み込んだことを反映し、「1. ソフトウェアライブラリ」に iOS 版の一覧を追記
 - **2026-10-26**: Audio モードの音声認識をサーバーへ移し、端末内の音声認識モデルと sherpa-onnx の配布をやめたことを反映。サーバー側で使用するモデルを参考として追記し、以前の版で配布していた音声認識モデルの帰属表示は「以前の版に含まれていたもの」へ移動。吹き出し検出モデルの学習方法を正確に記載。iOS 版について追記
 - **2026-08-08**: 制定
