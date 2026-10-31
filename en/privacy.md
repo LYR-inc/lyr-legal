@@ -3,7 +3,7 @@ layout: default
 lang: en
 title: Privacy Policy
 description: Privacy Policy for LYR, a translation app for Android and iOS — what we collect, why, who we share it with, and how long we keep it.
-updated: 2026-10-29
+updated: 2026-10-31
 ---
 
 
@@ -270,7 +270,7 @@ Data transmitted:
   - The peak memory used by screen-recording processing, the highest thermal state of the device, whether Low Power Mode was on, and whether microphone audio arrived through screen recording (only whether it arrived; the audio itself is not used)
   - How far you went through the first-launch guide (how many pages, whether you agreed or chose "Not now")
   - Settings changes (display language, appearance, show original, and recognizing English audio; only the selected value)
-  - How "Send feedback" opened (mail composer, mail app, or contact page) and whether the email was sent from the composer
+  - That "Send feedback" was opened (not what you sent)
   - Whether restoring purchases succeeded, purchases awaiting approval, and turning off auto-renewal (no transaction numbers or other identifiers are sent)
   - Whether the app was installed from TestFlight (test distribution) or the App Store
 
@@ -321,8 +321,8 @@ RevenueCat so that RevenueCat sends the number and amount of purchases and renew
 Purchase records are kept by RevenueCat for as long as needed to manage the state of the paid plan.
 
 **Feedback and inquiries**:
-- **Feedback form (such as from the Android app's settings screen)**: We receive it through Google Forms (Google LLC (United States)). What is sent is the content you enter yourself, along with the app version, device model, OS version, and display language. The "Contact" field is optional; if you fill it in, we use it only to contact you to ask more about your feedback
-- **Email (Send feedback in the iOS app's settings screen, and inquiries from our website)**: We receive these by email to hello@lyr.jp. In the iOS app, the app version, device model, OS version, and display language are added to the end of the email body in advance, and you can review or delete them before sending. Email is received through Google Workspace (Google LLC (United States))
+- **Feedback form (such as from "Send feedback" in the Android and iOS apps' settings screens)**: We receive it through Google Forms (Google LLC (United States)). What is sent is the content you enter yourself, along with the app version, device model, OS version, and display language. The "Contact" field is optional; if you fill it in, we use it only to contact you to ask more about your feedback
+- **Email (inquiries from our website)**: We receive these by email to hello@lyr.jp. Email is received through Google Workspace (Google LLC (United States))
 - We use the email addresses, contact details and content you send us only to reply to you, to investigate problems, and to improve the Service
 
 We do not provide information to any third parties other than those listed in 2.5 and 3.1 through 3.5. We do not use advertising networks and do not collect the advertising ID.
@@ -467,6 +467,7 @@ This Policy is governed by the laws of Japan.
 
 ## Revision history
 
+- **2026-10-31**: Revised because the iOS app's "Send feedback" now uses a Google Form instead of email. Main changes: 3.5 adds the iOS app to the feedback form and limits email to inquiries from our website / in 3.2, the iOS usage data item for "Send feedback" now only records that it was opened
 - **2026-10-29**: Revised to start iOS release notification sign-ups. Main changes: new 2.7 "iOS release notification sign-up" / 1 adds the sign-up form to the scope / 3.4 adds where sign-up data is held (including Apple) / 4 adds how long sign-up data is kept
 - **2026-10-27**: Revised so that the iOS version also sends usage data. Main changes: 3.2 now applies to both the Android and iOS versions and lists what the iOS version additionally sends and how to turn it off / 2.4 refers to 3.2 for the iOS version / 4 applies the retention period for usage data to both versions / 3.5 adds that iOS purchases are managed through RevenueCat
 - **2026-10-26**: Revised for the launch of the iOS version. Main changes: 1 and 2 add the iOS version / 2.1, 2.2, 2.5, 3.2, 3.3 and 6 are marked as Android only / 2.3 adds how the iOS version captures audio, its recent-subtitle context and device identifier / 2.4 adds what the iOS version keeps on the device, including its activity log / 3.1 adds the route used by the iOS version / 3.5 adds paid-plan purchases (Google Play and App Store) / 4, 8 and 8-3 add how the iOS version is handled (the device identifier and activity log are excluded from backups) / 5 splits permissions into Android and iOS / 3.5 adds feedback and inquiries (the iOS version receives them by email) and 4 adds how long we keep them

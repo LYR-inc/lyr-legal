@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>LYR フィードバック (iPhone) / Feedback</title>
+<!--
+  LYR iOS 版の「フィードバックを送る」からの入口 (2026-10-31)。Android 版の feedback.html と同じ作り。
+
+  ★iOS 版のフォームを別に持つ理由: Android のフォームは先行テスト向けで、必須の質問に Audio の選択肢が無い・
+  Google Play の国を聞くため、iOS の利用者が正しく答えられない。フォームは lyrios の
+  scripts/release/create_ios_feedback_form.gs で作った (個人アカウント所有)。
+
+  ★アプリはフォームを直接指さず、必ずこのページを経由する。出荷したアプリの URL は後から変えられないが、
+  ここを挟めば下の FORMS を書き換えるだけで全端末が追従する。
+
+  アプリは短いキーで端末の情報を渡す: v (版) / d (機種) / o (iOS の版) / l (表示の言語)。
+  フォームの entry ID への対応はこの MAP だけに置く。
+
+  言語の振り分け: l が ja で始まれば日本語版、それ以外は英語版。l が無ければブラウザの言語で同じ判定。
+  ★差し替え直後の 10 分間は古い版が使われる (GitHub Pages の Cache-Control: max-age=600)。
+-->
+<style>
+  body {
+    margin: 0; min-height: 100vh;
+    display: flex; align-items: center; justify-content: center;
+    font-family: system-ui, -apple-system, "Hiragino Sans", "Noto Sans JP", sans-serif;
+    color: #3a3a3a; background: #fbfbfa;
+  }
+  main { text-align: center; padding: 24px; }
+  a { color: #2b6cb0; }
+  @media (prefers-color-scheme: dark) {
+    body { color: #d6d6d6; background: #1b1b1b; }
+    a { color: #7fb3e8; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <p>フィードバックフォームを開いています… / Opening the feedback form…</p>
+  <p><a id="fallback" href="#">開かない場合はこちら / Tap here if it does not open</a></p>
+</main>
+<script>
+(function () {
+  // ==== 差し替えるのはここと、末尾 noscript の URL ====
+  var FORMS = {
+    ja: {
+      form: "https://docs.google.com/forms/d/e/1FAIpQLSemBlzdx-Lq6Go_H4YaT1BUp93P0H2x_fJvh1Fp1YEADAMKHQ/viewform",
+      map: {
+        v: "entry.1159790446",  // アプリのバージョン
+        d: "entry.1748516940",  // 機種
+        o: "entry.1663969113",  // iOS のバージョン
+        l: "entry.133132616"    // 表示の言語
+      }
+    },
+    en: {
+      form: "https://docs.google.com/forms/d/e/1FAIpQLSeZs6hf7UNS_Mn4femugcrHPEiNR1kC578b0bY_ShsvIM_UqA/viewform",
+      map: {
+        v: "entry.883531282",
+        d: "entry.1863874791",
+        o: "entry.1802212022",
+        l: "entry.862657000"
+      }
+    }
+  };
+  // ====================================
+
+  var params = new URLSearchParams(location.search);
+  var lang = (params.get("l") || navigator.language || "ja").toLowerCase();
+  var pick = lang.indexOf("ja") === 0 ? FORMS.ja : FORMS.en;
+  if (pick === FORMS.en) document.documentElement.lang = "en";
+  var out = new URLSearchParams();
+  Object.keys(pick.map).forEach(function (key) {
+    var value = params.get(key);
+    if (value) out.set(pick.map[key], value);
+  });
+  var target = pick.form;
+  if (out.toString()) {
+    out.set("usp", "pp_url");
+    target = pick.form + "?" + out.toString();
+  }
+  document.getElementById("fallback").href = target;
+  // replace: 戻るボタンでこの中継ページに戻らないようにする
+  location.replace(target);
+})();
+</script>
+<noscript>
+  <!-- ★上の FORMS と同じ URL。JS 無効だとスクリプトから書き換えられないため、ここだけは重複を持つ。 -->
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSemBlzdx-Lq6Go_H4YaT1BUp93P0H2x_fJvh1Fp1YEADAMKHQ/viewform">フィードバックフォームを開く</a></p>
+  <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeZs6hf7UNS_Mn4femugcrHPEiNR1kC578b0bY_ShsvIM_UqA/viewform">Open the feedback form (English)</a></p>
+</noscript>
+</body>
+</html>
