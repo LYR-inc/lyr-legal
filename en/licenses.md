@@ -3,7 +3,7 @@ layout: default
 lang: en
 title: Open Source Licenses
 description: Licenses and attribution for the open source software, fonts, and machine learning models used in LYR (a translation app for Android and iOS).
-updated: 2026-10-29
+updated: 2026-11-04
 ---
 
 
@@ -79,6 +79,12 @@ License: Apache License 2.0 / Source: [PaddlePaddle/PaddleOCR](https://github.co
 The model that detects speech bubbles in manga was further trained by us on synthetic data only,
 using the YOLOX training source code and starting from the pretrained YOLOX-Nano weights.
 YOLOX license: Apache License 2.0 / Source: [Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)
+
+**Silero VAD (voice activity detection)**
+In Audio mode, this model detects which parts of the audio are speech, on the device (Android and iOS).
+We use the weights of silero-vad 6.2.3. The iOS version uses these weights converted by us to the Core ML format
+(the weights themselves are not modified or further trained).
+License: MIT License (Copyright (c) 2020-present Silero Team) / Source: [snakers4/silero-vad](https://github.com/snakers4/silero-vad)
 
 Other on-device models (for example, for tracking text regions) were designed and trained by us.
 
@@ -203,6 +209,7 @@ correct it promptly.
 
 ## Revision history
 
+- **2026-11-04**: Reflects using Silero VAD to detect speech in Audio mode, and adds it to "3. On-device models, including optical character recognition (OCR)"
 - **2026-10-29**: Added "6. Artwork and trademarks on the website (lyr.jp)", with the attribution for the Android robot and trademark notices for Android, iPhone and others
 - **2026-10-27**: Reflects adding Firebase Analytics and RevenueCat to the iOS version, and adds the list for the iOS version to "1. Software libraries"
 - **2026-10-26**: Reflects moving speech recognition for Audio mode to servers and no longer distributing on-device speech recognition models or sherpa-onnx. Server-side models are listed for reference, and the attribution for speech recognition models distributed in earlier versions has moved to "Included in earlier versions". Describes accurately how the speech bubble detection model was trained, and adds the iOS version.
