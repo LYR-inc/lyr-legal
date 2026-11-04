@@ -2,7 +2,7 @@
 layout: default
 title: ライセンス表記
 description: LYR (Android・iOS の翻訳アプリ) が利用しているオープンソースソフトウェア、フォント、機械学習モデルのライセンスと帰属表示。
-updated: 2026-10-29
+updated: 2026-11-04
 ---
 
 
@@ -76,6 +76,12 @@ PaddleOCR のモデルをもとに本サービスが追加で学習したもの�
 マンガの吹き出しを検出するモデルは、YOLOX の学習用ソースコードを使い、YOLOX-Nano の事前学習済みの重みを
 初期値として、本サービスが合成データのみで追加学習したものです。
 YOLOX のライセンス: Apache License 2.0 / 出典: [Megvii-BaseDetection/YOLOX](https://github.com/Megvii-BaseDetection/YOLOX)
+
+**Silero VAD（声の判定）**
+Audio モードで、音声のうち声の部分を端末の中で判定するモデルです（Android 版・iOS 版）。
+silero-vad 6.2.3 の重みを使用しています。iOS 版では、本サービスがこの重みを Core ML の形式に変換したものを
+使用しています（重みに学習などの変更は加えていません）。
+ライセンス: MIT License（Copyright (c) 2020-present Silero Team）/ 出典: [snakers4/silero-vad](https://github.com/snakers4/silero-vad)
 
 上記以外の端末内のモデル（文字領域の追跡など）は、本サービスが独自に設計・学習したものです。
 
@@ -202,6 +208,7 @@ Qwen のライセンス: Apache License 2.0 / 出典: [Qwen/Qwen3.6-27B](https:/
 
 ## 改定履歴
 
+- **2026-11-04**: Audio モードの声の判定に Silero VAD を使うことを反映し、「3. 文字認識 (OCR) などの端末内モデル」に追記
 - **2026-10-29**: 「6. ウェブサイト (lyr.jp) の図版と商標」を新設し、Android ロボットの帰属表示と、Android・iPhone などの商標の表記を追記
 - **2026-10-27**: iOS 版に Firebase Analytics と RevenueCat を組み込んだことを反映し、「1. ソフトウェアライブラリ」に iOS 版の一覧を追記
 - **2026-10-26**: Audio モードの音声認識をサーバーへ移し、端末内の音声認識モデルと sherpa-onnx の配布をやめたことを反映。サーバー側で使用するモデルを参考として追記し、以前の版で配布していた音声認識モデルの帰属表示は「以前の版に含まれていたもの」へ移動。吹き出し検出モデルの学習方法を正確に記載。iOS 版について追記
